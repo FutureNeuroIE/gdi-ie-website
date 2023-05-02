@@ -1,0 +1,518 @@
+<!--Code adapted from https://gdi.onemilliongenomes.eu-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDI Ireland</title>
+    <meta name="description"
+        content="Genomic Data Infrastructure (GDI) Ireland is the Irish node of the European GDI project which brings together experts across 22 countries to form a secure network of human genetic data.">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <meta property="og:title" content="European Genomic Data Infrastructure (GDI) project">
+    <meta property="og:description"
+        content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gdi.onemilliongenomes.eu/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GDI project">
+    <meta name="twitter:description"
+        content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
+    <meta name="twitter:site" content="@GDI_EUproject">
+    <meta property="twitter:image" content="https://gdi.onemilliongenomes.eu/twitter-home.jpg">
+    <meta property="twitter:image:alt" content="Image for the GDI project website.">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer data-domain="gdi.onemilliongenomes.eu" src="https://plausible.io/js/script.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            /*
+            * Set the Twitter timeline to the same height as the boxes
+            * next to it on desktop.
+            * TO DO: make the height responsive. Limit to innerWidth > 1024?
+            */
+            twitterHeight = () => {
+                const column1Height = document.getElementById("column1").offsetHeight;
+                const column2Height = document.getElementById("column2").offsetHeight;
+                const twitterBox = document.getElementById("twitter-feed");
+                twitterBox.setAttribute("data-height", (column1Height - column2Height - 60));
+            }
+
+            loadTwitterScript = () => {
+                const script = document.createElement('script');
+                script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+
+            twitterHeight();
+            /* The Twitter script needs to load after the data-height attribute is calculated */
+            setTimeout(loadTwitterScript, 100);
+        });
+    </script>
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['disableCookies']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https://webstats.elixir-europe.org/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', '3']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container" id="nav-container">
+          <div class="navbar-brand">
+            <a href="https://b1mg-project.eu">
+              <img src="images/gdi-ireland-logo.png" width="200px" alt="B1MG logo" id="logo">
+            </a>
+            <div class="navbar-brand">
+              <a href="https://b1mg-project.eu">
+                <img src="images/gdi-logo.svg" width="200px" height="200px" alt="B1MG logo" id="logo2">
+              </a>
+          </div>
+
+          <div id="mainNavBar" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/" class="navbar-item px-4 is-active">
+                Home
+              </a>
+              <div class="navbar-item is-hoverable">
+                <a href="/about/" class="navbar-item">
+                  About
+                </a>
+              </div>
+              <div class="navbar-item is-hoverable">
+                <a href="/about/" class="navbar-item">
+                  The team
+                </a>
+              </div>
+              <div class="navbar-item is-hoverable">
+                <a href="/about/" class="navbar-item">
+                  Public and patient involvement
+                </a>
+              </div>
+              <div class="navbar-item is-hoverable">
+                <a href="/about/" class="navbar-item">
+                  News
+                </a>
+              </div>
+              <div class="navbar-item is-hoverable">
+                <a href="/about/" class="navbar-item">
+                  Contact
+                </a>
+              </div>
+
+            </div>
+      </div>
+    </div></nav>
+    <main>
+        <section class="section pt-55">
+            <div class="container content has-text-grey-darker">
+                <div class="columns" id="column1">
+                    <div class="column is-three-quarters pr-3-desktop">
+                        <p class="is-size-5">Genomic Data Infrastructure (GDI) Ireland is the Irish node of the European
+                          GDI project which brings together experts across 22 countries to form a secure network of human
+                          genetic data. The GDI project will realise the ambition <a href="https://b1mg-project.eu/">Beyond 1 Million Genomes
+                                (B1MG)</a> project and is realising the ambition of the <a
+                                href="https://digital-strategy.ec.europa.eu/en/policies/1-million-genomes">1+Million
+                                Genomes (1+MG) initiative.
+                        </p>
+                        <div class="notification is-primary mt-55 announcement">
+                            The <strong>Genomic Data Infrastructure (GDI)</strong> project launches. See the <a
+                                href="/news/" class="underline">news story</a>.
+                        </div>
+                        <div class="columns mt-55">
+                            <div class="column has-text-centered">
+                                <div class="bordered min-height-100">
+                                    <h2>What data is being used?</h2>
+                                    <p>Human DNA sequence data will be used in the GDI-Ireland project.
+                                      The aim of the project is to create a comprehensive database of DNA sequences from people living in Ireland.
+                                      Gathering all of this data in one place will better our understanding of disease, improve diagnoses and lead to new treatment options.
+
+                                    </p>
+                                    <!--<p><strong>Genomic data</strong> is data about your genes, including their structure and function. <strong>Phenomics data</strong> is data about your observable traits, like weight and height.</p>-->
+                                </div>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="bordered min-height-100">
+                                    <h2>Who can use the data?</h2>
+                                    <p>Our aim is to create safe and secure computer systems and protocols, so that
+                                      Irish genetic data can be safely shared with approved clinicans, researchers and healthcare policy makers
+                                      in Ireland and across Europe. Anyone with access to GDI-Ireland data will require approval by a data access committee.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column has-text-centered">
+                                <div class="bordered min-height-100">
+                                    <h2>How will this benefit the public?</h2>
+                                    <p>Benefits of having a national genomic database include improved and advanced research of genomic data, discovery of new treatment options,
+                                      the development of new diagnostic tests and improved access to clinical trials. All of this together will greatly improve clinical
+                                      care in Ireland in terms of patient outcomes and health economics.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="bordered min-height-100">
+                                    <h2 class="">Who is involved?</h2>
+                                    <p>Researchers from 4 institues in Ireland (RCSI, UL, UCD and MU) are running the project at a national level.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column pr-3-desktop">
+                        <div class="mb-5 mt-0 box plum-bg" id="column2">
+                            <div class="has-text-centered icons"><a
+                                    href="https://www.linkedin.com/company/gdi-euproject" aria-label="Linkedin"><i
+                                        class="icofont-linkedin has-text-white is-size-1 pr-3" title="LinkedIn"></i></a>
+                                <a href="https://twitter.com/GDI_EUproject" aria-label="Twitter"><i
+                                        class="icofont-twitter  has-text-white is-size-1 pr-4"
+                                        title="Twitter"></i></a><a href="https://www.subscribepage.com/gdi_euproject"
+                                    aria-label="Newsletter"><i class="icofont-letter has-text-white is-size-1"
+                                        title="Newsletter"></i></a>
+                            </div>
+                            <p class="mt-3 has-text-centered has-low-line-height"><a
+                                    href="https://www.subscribepage.com/gdi_euproject" class="underlined">Subscribe to
+                                    our newsletter</a></p>
+                        </div>
+                        <div class="mt-55">
+                            <a class="twitter-timeline" href="https://twitter.com/GDI_EUproject?ref_src=twsrc%5Etfw"
+                                data-height="650" data-dnt="true" data-chrome="nofooter" id="twitter-feed">Tweets by GDI_EUproject</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 mt-6 has-background-gradient has-text-white has-text-centered">
+                    <h2 class="mb-5 mt-2 has-text-white">Realising a vision for European healthcare</h2>
+                    <div class="mb-55 box">
+                        <div class="columns">
+                            <div class="column is-one-quarter pt-5">
+                                <a href="https://digital-strategy.ec.europa.eu/en/policies/1-million-genomes"
+                                    title="1+MG Initiative"><img src="images/gdi-ireland-logo.png" alt="GDI ireland logo" width="1"
+                                        loading="lazy"></a>
+                            </div>
+                            <div class="column has-text-left-tablet has-text-grey-darker p-5">
+                                <h3 class="is-size-4">The vision</h3>
+                                <p><strong>In 2018</strong>, the <a
+                                        href="https://digital-strategy.ec.europa.eu/en/policies/1-million-genomes">1+Million
+                                        Genomes (1+MG) initiative</a> was launched to create a European data
+                                    infrastructure for genomic data. This would implement common national rules enabling
+                                    federated data access. Twenty four European countries have signed the declaration.
+                                    The goal of the initiative is <strong>to enable secure access to genomic and the
+                                        corresponding clinical data across Europe for better research, personalised
+                                        healthcare and health policy making</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-5 box">
+                        <div class="columns">
+                            <div class="column is-one-quarter pt-5">
+                                <a href="https://b1mg-project.eu/" title="B1MG project"><img src="images/gdi-ireland-logo.png"
+                                        alt="B1MG logo" width="150" loading="lazy"></a>
+                            </div>
+                            <div class="column has-text-left-tablet has-text-grey-darker p-5">
+                                <h3 class="is-size-4">Designing and testing</h3>
+                                <p><strong>In 2020</strong>, the <a href="https://b1mg-project.eu/">Beyond 1 Million
+                                        Genomes (B1MG)</a> project began. The project is developing guidelines on how to
+                                    implement the 1+MG initiative. Amongst its outputs are blueprints and
+                                    recommendations for building a federated network of genomic data (the 1+MG Trust
+                                    Framework). It is also producing tools to help countries self assess their readiness
+                                    to implement genomics into healthcare systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-5 box">
+                        <div class="columns">
+                            <div class="column is-one-quarter pt-5">
+                                <img src="images/gdi-logo-no-text.svg" alt="GDI logo" width="150" loading="lazy">
+                            </div>
+                            <div class="column has-text-left-tablet has-text-grey-darker p-5">
+                                <h3 class="is-size-4">Scaling up and sustaining</h3>
+                                <p><strong>In 2022</strong>, the GDI project began. This &euro;40M project is building
+                                    on the
+                                    preparatory work of 1+MG working groups, the B1MG project and investments of EU
+                                    countries. It is <strong>creating and deploying the technical capacity for accessing
+                                        genomic data</strong>. In this way, it will implement the vision of the 1+MG
+                                    initiative.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="has-background-light bordered mt-6 py-5">
+                    <h2 class="has-text-centered">How the project is organised</h2>
+                    <p class="has-text-centered">The European Genomic Data Infrastructure (GDI) project is structured
+                        into <strong>three pillars of work and a coordination work package</strong>.
+                    </p>
+                    <h3 class="has-text-centered has-text-primary">Coordination and support</h3>
+                    <p class="has-text-centered mb-5">The coordination and support work package coordinates the project,
+                        supports the consortium and the 1+MG initiative, monitors progress and liaises with other
+                        European and global initiatives.</p>
+                    <div class="columns mt-5">
+                        <div class="column has-text-centered">
+                            <div class="bordered min-height-100 has-background-white">
+                                <h3 class="is-size-4 has-text-primary">Pillar I</h3>
+                                <h4>Long-term sustainability</h4>
+                                <p>Pillar I brings together country representatives to agree on a long-term governance
+                                    model, a legal framework and a business model for the infrastructure. These will
+                                    ensure the infrastructure continues to operate after the end of the GDI project.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="bordered min-height-100 has-background-white">
+                                <h3 class="is-size-4 has-text-primary">Pillar II</h3>
+                                <h4>Infrastructure deployment</h4>
+                                <p>Pillar II implements the infrastructure by increasing the interoperability of
+                                    European data resources. It ensures these resources can operate as part of the 1+MG
+                                    infrastructure and are ready to access once the required agreements are in place.
+                                    “Real” synthetic data will be used to demonstrate and validate the infrastructure,
+                                    and data provided from EU projects under their current agreements.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="bordered min-height-100 has-background-white">
+                                <h3 class="is-size-4 has-text-primary">Pillar III</h3>
+                                <h4>Use cases</h4>
+                                <p>Pillar III guides the implementation of the project through key use cases (for
+                                    example, the <a href="https://b1mg-project.eu/docs/genome-europe.pdf">Genome of
+                                        Europe</a>, cancer data and infectious disease data). It works with users like
+                                    clinicians, researchers and innovators to identify solutions that could form part of
+                                    the infrastructure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="has-text-centered">Who is involved</h2>
+                <table class="table is-bordered is-striped">
+                    <thead class="has-background-primary">
+                        <tr>
+                            <th class="has-text-white">Country</th>
+                            <th class="has-text-white">Institute</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Belgium</td>
+                            <td>
+                                <div class="mb-2">Interuniversity Microelectronics Centre (IMEC)</div>
+                                <div class="mb-2">Sciensano</div>
+                                <div class="mb-2">VIB</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Bulgaria</td>
+                            <td>
+                                <div class="mb-2">Medical University of Sofia, Bulgaria</div>
+                                <div class="mb-2">Ministry of Education and Science of Bulgaria</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Croatia</td>
+                            <td>
+                                <div class="mb-2">Ruđer Bošković Institute</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Czech Republic</td>
+                            <td>
+                                <div class="mb-2">Masaryk University</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Denmark</td>
+                            <td>
+                                <div class="mb-2">Danish National Genome Center</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Estonia</td>
+                            <td>
+                                <div class="mb-2">Sotsiaalministeerium (Ministry of Social Affairs, Estonia)
+                                </div>
+                                <div class="mb-2">University of Tartu, Institute of Computer Science</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Finland</td>
+                            <td>
+                                <div class="mb-2">CSC - IT Center for Science Ltd</div>
+                                <div class="mb-2">Finnish Institute for Health and Welfare</div>
+                                <div class="mb-2">Ministry of Social Affairs and Health, Finland</div>
+                                <div class="mb-2">University of Helsinki</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">France</td>
+                            <td>
+                                <div class="mb-2">Institut Français de Bioinformatique</div>
+                                <div class="mb-2">Institut national de la santé et de la recherche médicale
+                                    (Inserm)
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Germany</td>
+                            <td>
+                                <div class="mb-2">Eberhard Karls University of Tübingen (University of Tübingen)
+                                </div>
+                                <div class="mb-2">Empirica Gesellschaft für Kommunikations und
+                                    Technologieforschung
+                                    MBH</div>
+                                <div class="mb-2">Federal Ministry of Research and Education, Germany</div>
+                                <div class="mb-2">Federal Ministry of Health, Germany</div>
+                                <div class="mb-2">German Cancer Research Center</div>
+                                <div class="mb-2">Universitätsklinikum Aachen</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Ireland</td>
+                            <td>
+                                <div class="mb-2">Royal College of Surgeons in Ireland</div>
+                                <div class="mb-2">The Health Research Board</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Italy</td>
+                            <td>
+                                <div class="mb-2">Consiglio Nazionale delle Ricerche</div>
+                                <div class="mb-2">Istituto Italiano di Tecnologia</div>
+                                <div class="mb-2">Università Cattolica del Sacro Cuore</div>
+                                <div class="mb-2">Vita-Salute San Raffaele University</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Latvia</td>
+                            <td>
+                                <div class="mb-2">Latvian Biomedical Research and Study Centre</div>
+                                <div class="mb-2">Ministry of Health of the Republic of Latvia</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Lithuania</td>
+                            <td>
+                                <div class="mb-2">Lietuvos sveikatos mokslų universiteto ligoninė Kauno klinikos
+                                </div>
+                                <div class="mb-2">National Cancer Institute</div>
+                                <div class="mb-2">Vilnius University Hospital Santaros Klinikos</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Luxembourg</td>
+                            <td>
+                                <div class="mb-2">Ministry for Higher Education and Research, Luxembourg</div>
+                                <div class="mb-2">University of Luxembourg</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">The Netherlands</td>
+                            <td>
+                                <div class="mb-2">Erasmus University Medical Center Rotterdam</div>
+                                <div class="mb-2">Netherlands Cancer Institute</div>
+                                <div class="mb-2">Stichting Health-RI</div>
+                                <div class="mb-2">UMCG</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Norway</td>
+                            <td>
+                                <div class="mb-2">Norwegian Directorate of Health</div>
+                                <div class="mb-2">Universitetet i Oslo</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Portugal</td>
+                            <td>
+                                <div class="mb-2">Associação BIP4DAB</div>
+                                <div class="mb-2">Instituto Nacional de Saúde Doutor Ricardo Jorge</div>
+                                <div class="mb-2">Instituto Superior Técnico</div>
+                                <div class="mb-2">Universidade de Aveiro</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Slovenia</td>
+                            <td>
+                                <div class="mb-2">University of Ljubljana</div>
+                                <div class="mb-2">University of Maribor</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Spain</td>
+                            <td>
+                                <div class="mb-2">Barcelona Supercomputing Center</div>
+                                <div class="mb-2">Centro nacional de análisis genómico - Centro de Regulación
+                                    Genómica
+                                </div>
+                                <div class="mb-2">Instituto de Salud Carlos III</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">Sweden</td>
+                            <td>
+                                <div class="mb-2">Uppsala University</div>
+                                <div class="mb-2">Vinnova, the Swedish Agency for Innovation Systems</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="is-size-5 has-text-primary">International organisations</td>
+                            <td>
+                                <div class="mb-2">BBMRI-ERIC</div>
+                                <div class="mb-2">EMBL (ELIXIR and EMBL-EBI)</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Contact</h2>
+                <p><a href="mailto:gdi-coordination@elixir-europe.org"
+                        class="underline">gdi-coordination@elixir-europe.org</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="images/eu-flag.png" alt="EU flag" width="80">
+                        </div>
+                        <p class="media-content">GDI project receives funding from the European Union’s Digital Europe
+                            Programme under grant agreement number 101081813.</p>
+                    </div>
+                </div>
+                <div class="column has-text-right">
+                    <p class="icons"><a href=" https://www.linkedin.com/company/gdi-euproject" aria-label="Linkedin"><i
+                                class="icofont-linkedin has-text-primary is-size-1 pr-2" title="LinkedIn"></i></a> <a
+                            href="https://twitter.com/GDI_EUproject" aria-label="Twitter"><i
+                                class="icofont-twitter  has-text-primary is-size-1 pr-3" title="Twitter"></i></a><a
+                            href="https://www.subscribepage.com/gdi_euproject" aria-label="mailchimp"><i
+                                class="icofont-letter has-text-primary is-size-1" title="Newsletter"></i></a></p>
+                    <p class="mt-2"><a href="mailto:gdi-coordination@elixir-europe.org"
+                            class="underline">gdi-coordination@elixir-europe.org</a></p>
+                    <p><a href="accessibility.html">Accessibility</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
