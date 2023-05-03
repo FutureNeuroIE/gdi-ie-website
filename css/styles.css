@@ -7788,7 +7788,7 @@ i {
   border: 0; }
 
 .has-background-gradient {
-  background-image: linear-gradient(to right, #7b1c58, #7276b1); }
+  background-color: #7b1c58; }
 
 .has-low-line-height {
   line-height: 1.25; }
