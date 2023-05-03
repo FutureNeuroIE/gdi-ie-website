@@ -1549,13 +1549,13 @@ div.icon-text {
   background-color: whitesmoke;
   border-radius: 4px;
   position: relative;
-  padding: 1.25rem 2.5rem 1.25rem 1.5rem; }
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem; }
   .notification a:not(.button):not(.dropdown-item) {
     color: currentColor;
     text-decoration: underline; }
   .notification strong {
     color: currentColor;
-    font-size: 25pt;
+    font-size: 20pt;
     align-content: center;}
   .notification code,
   .notification pre {
