@@ -6597,7 +6597,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 1.5rem !important; }
 
 .pt-5 {
-  padding-top: 1.5rem !important; }
+  padding-top: 1.5rem !important;
+  align-content: center;}
 
 .pr-5 {
   padding-right: 1.5rem !important; }
