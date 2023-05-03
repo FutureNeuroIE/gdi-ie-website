@@ -1554,7 +1554,9 @@ div.icon-text {
     color: currentColor;
     text-decoration: underline; }
   .notification strong {
-    color: currentColor; }
+    color: currentColor;
+    font-size: 25pt;
+    align-content: center;}
   .notification code,
   .notification pre {
     background: white; }
