@@ -7815,6 +7815,13 @@ i {
   padding: 25px;
   border: 1px solid #dbdbdb; }
 
+.bordered2 {
+    padding: 25px;
+    border: 1px solid #dbdbdb; }
+
+.bordered2:hover img {
+    filter: opacity(25%);
+  }
 /*
   * Navbar and hamburger menu styles
   * -------------------------
