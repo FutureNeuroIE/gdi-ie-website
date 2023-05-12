@@ -1545,6 +1545,10 @@ div.icon-text {
     height: 128px;
     width: 128px; }
 
+.intro-links {
+  color: #FFD895;
+}
+
 .notification {
   background-color: whitesmoke;
   border-radius: 4px;
