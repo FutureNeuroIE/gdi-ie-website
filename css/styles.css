@@ -7953,9 +7953,8 @@ figure.is-pulled-right {
 @media only screen and (max-width: 700px) {
 
   #logo2 {
-    position: absolute;
-    left: 220px;
-    top: 7.5px; }
+    position: left;
+    top: 30px; }
 
   table,
   thead,
