@@ -72,6 +72,31 @@
     </script>
     <!-- End Matomo Code -->
 
+    <style>
+        /* Initial style for the navigation menu (hidden on small screens) */
+        .navbar-menu {
+          display: none;
+        }
+    
+        /* Style for the burger menu button icon */
+        .navbar-burger .icon {
+          color: #333; /* Customize the color as needed */
+        }
+    
+        /* Media query for small screens */
+        @media screen and (max-width: 768px) {
+          /* Show the navigation menu when the screen is small */
+          .navbar-menu.is-active {
+            display: block;
+          }
+
+          /* Ensure the navigation menu is always visible on larger screens */
+        @media screen and (min-width: 769px) {
+        .navbar-menu {
+        display: flex !important; /* Force display to override previous rules */
+            }
+        }
+      </style>
 </head>
 
 <body>

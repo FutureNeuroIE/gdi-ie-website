@@ -3987,24 +3987,7 @@ body.has-navbar-fixed-bottom {
 
 .navbar-menu {
   display: none; 
-
-  .navbar-burger .icon {
-    color: #333; /* Customize the color as needed */
-  }
-
-  /* Media query for small screens */
-  @media screen and (max-width: 768px) {
-    /* Show the navigation menu when the screen is small */
-    .navbar-menu.is-active {
-      display: block;
-    }
-
-    /* Ensure the navigation menu is always visible on larger screens */
-  @media screen and (min-width: 769px) {
-  .navbar-menu {
-  display: flex !important; /* Force display to override previous rules */
-      }
-    }
+}
 
 .navbar-item,
 .navbar-link {
