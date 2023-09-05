@@ -4137,7 +4137,8 @@ a.navbar-item,
       color: #4850d4; }
 
   .navbar-burger {
-    display: none; }
+    display: none;
+ }
 
   .navbar-item,
   .navbar-link {
@@ -7828,7 +7829,7 @@ i {
   * -------------------------
   */
 .navbar {
-  padding: 10px 20px 7px;
+  padding: 50px 20px 7px;
   z-index: 0;
   box-shadow: 0px 3px 7px #ccc; }
   .navbar .navbar-dropdown {
@@ -7954,7 +7955,8 @@ figure.is-pulled-right {
 @media only screen and (max-width: 700px) {
 
   #logo2 {
-    position: left; }
+    position: left;
+  padding-top: 50px; }
 
   table,
   thead,
@@ -8136,7 +8138,8 @@ span[data-tooltip] {
 @media only screen and (min-width: 1024px) {
 
   #logo2 {
-    position: left;}
+    position: left;
+  padding-top: 50px; }
 
   .navbar {
     padding: 10px 500px 10px 10px; }
@@ -8144,10 +8147,6 @@ span[data-tooltip] {
   #nav-container {
     padding: 10px 10px 10px 10px; }
 
-
-
-  #logo2 {
-    position: left; }
 
   #mainNavBar {
     position: absolute;
