@@ -357,6 +357,18 @@
         });
       </script>
       
+      loadTwitterScript = () => {
+    const script = document.createElement('script');
+    script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    document.getElementsByTagName("head")[0].appendChild(script);
+
+    // Add an event listener to initialize the Twitter widgets when the script is loaded
+    script.addEventListener("load", () => {
+        // Initialize Twitter widgets here if needed
+    });
+}
+
+
       </body>
       </html>      
       
