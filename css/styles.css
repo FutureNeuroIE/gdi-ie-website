@@ -8134,6 +8134,11 @@ span[data-tooltip] {
   * -------------------------
   */
 @media only screen and (min-width: 1024px) {
+
+  #logo2 {
+    position: left;
+    top: 30px; }
+
   .navbar {
     padding: 20px 0; }
 
