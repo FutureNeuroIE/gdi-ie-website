@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta property="og:title" content="European Genomic Data Infrastructure (GDI) project">
     <meta property="og:description"
         content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
@@ -70,23 +71,49 @@
         })();
     </script>
     <!-- End Matomo Code -->
+
+    <style>
+        /* Initial style for the navigation menu (hidden on small screens) */
+        .navbar-menu {
+          display: none;
+        }
+    
+        /* Style for the burger menu button icon */
+        .navbar-burger .icon {
+          color: #333; /* Customize the color as needed */
+        }
+    
+        /* Media query for small screens */
+        @media screen and (max-width: 768px) {
+          /* Show the navigation menu when the screen is small */
+          .navbar-menu.is-active {
+            display: block;
+          }
+        }
+      </style>
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="container" id="nav-container">
           <div class="navbar-brand">
-            <div class="navbar-brand">
-              <a href="https://gdi.onemilliongenomes.eu/">
-                <img src="images/gdi-logo.svg" width="200px" height="200px" alt="B1MG logo" id="logo2">
-              </a>
+            <a href="https://gdi.onemilliongenomes.eu/">
+              <img src="images/gdi-logo.svg" width="200px" height="200px" alt="B1MG logo" id="logo2">
+            </a>
+            <!-- Add the burger menu button -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="burger-menu">
+              <span class="icon">
+                <i class="fas fa-bars"></i>
+              </span>
+            </a>
           </div>
-
+          <!-- Wrap your navigation links in a div with the class "navbar-menu" -->
           <div id="mainNavBar" class="navbar-menu">
             <div class="navbar-start">
               <a href="https://lauraannewhelan.github.io/GDI_IE_Website/" class="navbar-item px-4 is-active">
                 Home
               </a>
+              <!-- Add your other navigation links here -->
               <div class="navbar-item is-hoverable">
                 <a href="team/index.html" class="navbar-item">
                   The Team
@@ -107,10 +134,12 @@
                   Contact
                 </a>
               </div>
-
+              <!-- Add your other navigation links here -->
+              <!-- ... -->
             </div>
-      </div>
-    </div></nav>
+          </div>
+        </div>
+    </nav>
     <main>
         <section class="section pt-55">
             <div class="container content has-text-grey-darker">
