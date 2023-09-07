@@ -5,14 +5,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GDI Ireland News</title>
+    <title>GDI Ireland Team</title>
     <meta name="description"
         content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon-180x180.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="../favicon-128x128.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
-    <meta property="og:title" content="European Genomic Data Infrastructure (GDI) project">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta property="og:title" content="European Genomic Data Infrastructure (GDI) project">
     <meta property="og:description"
         content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
     <meta property="og:type" content="website">
@@ -29,6 +30,44 @@
     <link rel="stylesheet" href="../css/icofont.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <script defer data-domain="gdi.onemilliongenomes.eu" src="https://plausible.io/js/script.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const burgerMenu = document.getElementById('burger-menu');
+        const navbarMenu = document.getElementById('mainNavBar');
+    
+        burgerMenu.addEventListener('click', function () {
+          this.classList.toggle('is-active');
+          navbarMenu.classList.toggle('is-active');
+        });
+      });
+    </script>
+
+<style>
+  /* Initial style for the navigation menu (hidden on small screens) */
+
+  /* Style for the burger menu button icon */
+  .navbar-burger .icon {
+    color: #333;
+     /* Customize the color as needed */
+  }
+
+  /* Media query for small screens */
+  @media screen and (max-width: 768px) {
+    /* Show the navigation menu when the screen is small */
+    .navbar-menu.is-active {
+      display: block;
+    }
+    }
+
+    /* Ensure the navigation menu is always visible on larger screens */
+  @media screen and (min-width: 769px) {
+  .navbar-menu {
+  display: flex !important; /* Force display to override previous rules */
+      }
+  }
+</style>
+
   </head>
 
   <body>
@@ -45,7 +84,7 @@
             </span>
           </a>
         </div>
-        <!-- Wrap your navigation links in a div with the class "navbar-menu" -->
+      <!-- Wrap your navigation links in a div with the class "navbar-menu" -->
         <div id="mainNavBar" class="navbar-menu">
           <div class="navbar-start">
             <a href="https://gdi-ireland.github.io/GDI_IE_Website/" class="navbar-item px-4 is-active">
@@ -83,7 +122,7 @@
         </div>
       </div>
   </nav>
-  <main>
+<main>
       <section class="section pt-55">
           <div class="container content has-text-grey-darker">
               <div class="columns is-centered" id="column1">
@@ -186,6 +225,9 @@
             </div>
         </div>
     </footer>
+
+
+
 </body>
 
 </html>
