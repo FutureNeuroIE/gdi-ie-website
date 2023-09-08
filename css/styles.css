@@ -8171,7 +8171,7 @@ span[data-tooltip] {
 
   #mainNavBar {
     position: absolute;
-    left: 300px;
+    left: 50%;
     bottom: 50px;
   }
 
