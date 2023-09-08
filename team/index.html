@@ -66,10 +66,10 @@
   display: flex !important; /* Force display to override previous rules */
       }
   }
-</style>
 
-    <style>
-        .rounded-image {
+
+   
+  .rounded-image {
             border-radius: 50%;
             display: block;
             margin-left: auto;
@@ -78,7 +78,25 @@
             margin-bottom: 1cm;
             width: 50%;
         }
+        .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+
     </style>
+
 
   </head>
 
@@ -86,7 +104,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="container" id="nav-container">
         <div class="navbar-brand">
-          <a href="https://gdi.onemilliongenomes.eu/">
+          <a href="https://gdi-ireland.github.io/GDI_IE_Website/team/index.html">
             <img src="images/gdi-ireland-logo.png" width="150px" height="150px" alt="gdi-ireland-logo" id="logo2">
           </a>
           <!-- Add the burger menu button -->
@@ -157,9 +175,10 @@
                             <div class="container">
                               <h2>Professor Gianpiero Cavalleri</h2>
                               <p class="title">Professor of Human Genetics</p>
-                              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                              <p>example@example.com</p>
-                              <p><button class="button">Contact</button></p>
+                              <button type="button" class="collapsible">Biography</button>
+                              <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                              </div>                              <p><button class="button">Contact</button></p>
                             </div>
                           </div>
                         </div>
@@ -271,8 +290,38 @@
             </div>
         </div>
     </footer>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+      <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
-
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
 
 </body>
 
