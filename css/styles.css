@@ -63,6 +63,28 @@
   -ms-user-select: none;
   user-select: none; }
 
+/* Modern Button Style */
+.modern-button {
+  background-color: #555; /* Change this to your desired background color */
+  color: white;
+  border: none;
+  padding: 12px 0; /* Adjust the padding as needed */
+  width: 100%; /* Set the width to 100% to span the container */
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Use 'block' display to take up the full width */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Hover State */
+.modern-button:hover {
+  background-color: #7b1c58; /* Change this to your desired hover color */
+}
+
+
 .select:not(.is-multiple):not(.is-loading)::after, .navbar-link:not(.is-arrowless)::after {
   border: 3px solid transparent;
   border-radius: 2px;

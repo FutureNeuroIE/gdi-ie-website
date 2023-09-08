@@ -77,7 +77,7 @@
             width: 50%;
         }
         
-  .collapsible {
+  .collapsible_content {
   background-color: #777;
   color: white;
   cursor: pointer;
@@ -87,23 +87,17 @@
   text-align: left;
   outline: none;
   font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.collapsible_content {
-  padding: 0 18px;
-  display: none;
+  display: none; /* Set to 'none' by default */
   overflow: hidden;
-  background-color: #f1f1f1;
+}
+
+.active, .collapsible_content:hover {
+  background-color: #555;
 }
 
 </style>
 
-
-  </head>
+</head>
 
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -168,7 +162,7 @@
                     }
                     </style>
                     <div class="notification is-primary mt-55" id="top-banner">
-                        <strong>A collaborative effort.</strong>
+                        <strong>The GDI Ireland Team</strong>
                     </div>
 
                       <p class="is-size-5">Experts across four institutes are leading various aspects of the project.
@@ -180,10 +174,10 @@
                             <div class="container">
                               <h2>Professor Gianpiero Cavalleri</h2>
                               <p class="title">Professor of Human Genetics</p>
-                              <button type="button" class="collapsible">Biography</button>
-                              <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                              </div>                              <p><button class="button">Contact</button></p>
+                              <button  class="modern-button">Biography</button>
+                              <div class="collapsible_content">
+                                <p>Gianpiero Cavalleri is Professor of Human Genetics, Deputy Director of the SFI FutureNeuro Research Centre and Director of the Human Genetic Variation Research Group at RCSI. Prof. Cavalleri is also Deputy Director (Translational Research) of the RCSI Office of Research and Innovation. Gianpiero was awarded a Ph.D. in human genetics at University College London in 2006. Prior to his arrival at RCSI, he worked at the Institute for Genome Science and Policy at Duke University, North Carolina. He was appointed to faculty at RCSI in 2008. Prof. Cavalleri has published over 150 articles in leading peer reviewed international journals including Nature, Nature Genetics, PNAS and the New England Journal of Medicine. A feature of his research is its diversity, and his research group works at the interface of computational biology, clinical research and human evolution.</p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -194,9 +188,15 @@
                             <div class="container">
                               <h2>Professor Denis Shields</h2>
                               <p class="title">Professor of Clinical Bioinformatics</p>
-                              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                              <p>example@example.com</p>
-                              <p><button class="button">Contact</button></p>
+                              <button  class="modern-button">Biography</button>
+                              <div class="collapsible_content">
+                                <p>Denis Shields studied genetics, bioinformatics and molecular evolution (completing a PhD with Paul Sharp at Trinity College Dublin). He worked in the University of Southampton on genetics with Newton Morton, and in companies on clinical trials and genetics (as Biometrics Manager in ICON, Dublin, and as Managing Director of Surgen Ltd, Dublin).
+
+                                  He has been in University College Dublin as Professor of Clinical Bioinformatics since 2005, where he set up the Bioinformatics and Systems Biology PhD programme (over 90 students since commencement in 2007) and is Director of the UCD Centre for Bioinformatics, based in the Conway Institute of Biomolecular and Biomedical Research.
+                                  
+                                  His main research interest is to better understand the evolution and interaction of short bioactive peptides, including those embedded within proteins and those released during food digestion. He teaches modules in Bioinformatics and in Personalised Medicine to undergraduates.</p>
+                              </div>                              
+                             
                             </div>
                           </div>
                         </div>
@@ -207,9 +207,11 @@
                             <div class="container">
                               <h2>Professor Aedín Culhane</h2>
                               <p class="title">Professor of Biomedical Sciences (Cancer Genomics) </p>
-                              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                              <p>example@example.com</p>
-                              <p><button class="button">Contact</button></p>
+                              <button  class="modern-button">Biography</button>
+                              <div class="collapsible_content">
+                                <p>Aedín Culhane is a Professor of Biomedical Sciences (Cancer Genomics) in the UL School of Medicine. She is a computational oncologist with expertise in multi-omics data integration, statistical genomics, clinical bioinformatics and genomics in oncology.  She has over 20 years’ experience in cancer genomics, of which over 15 years were in the Dana-Farber Cancer Institute and Harvard TH Chan School of Public Health in Boston, USA.  Her recent research focuses on algorithm development and integrative data of single cell molecular data in cancer to identify molecules that regulate and can be targeted during tumour development, progression, drug response and resistance.  She is a member of the Human Cell Atlas (https://www.humancellatlas.org ) project.   She is a leader in the Bioconductor (www.bioconductor.org) community, a global open source, open development software in R for genomics and an advocate for open source science. </p>
+                              </div>
+                              
                             </div>
                           </div>
                         </div>
@@ -220,9 +222,11 @@
                             <div class="container">
                               <h2>Professor Markus Helfert</h2>
                               <p class="title">Professor for Digital Service Innovation</p>
-                              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                              <p>example@example.com</p>
-                              <p><button class="button">Contact</button></p>
+                              <button  class="modern-button">Biography</button>
+                              <div class="collapsible_content">
+                                <p>Markus Helfert is Professor in Digital Service Innovation at Maynooth University, Innovation Value Institute (Ireland) and the Director of the Business Informatics Group at Maynooth University. He is a Principle Investigator at Lero – The Irish Software Research Centre and at the Adapt Research Centre. His research is centred on Digital Service Innovation, Smart Cities and IoT based Smart Environments and includes research areas such as Service Innovation, Intelligent Transportation Systems, Smart Services, Building Information Management, FinTech, Data Value, Enterprise Architecture, Technology Adoption, Analytics, Business Process Managem ent. Prof. Helfert is an expert in Data Governance Standards and is involved in European Standardisation initiatives. Markus Helfert has authored more than 200+ academic articles, journal and book contributions and has presented his work at international conferences. Helfert has received national and international grants from agencies such as European Union (FP7; H2020), Science Foundation Ireland and Enterprise Ireland, was project coordinator on EU projects, and is the Project coordinator of the H2020 Projects: PERFORM on Digital Retail.</p>
+                              </div>
+                              
                             </div>
                           </div>
                         </div>
@@ -233,9 +237,11 @@
                             <div class="container">
                               <h2>Dr Laura Whelan</h2>
                               <p class="title">Senior Postdoctoral Scientist and Project Manager</p>
-                              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                              <p>example@example.com</p>
-                              <p><button class="button">Contact</button></p>
+                              <button  class="modern-button">Biography</button>
+                              <div class="collapsible_content">
+                                <p>Laura completed her doctoral research under the supervision of Professor G. Jane Farrar in the School of Genetics and Microbiology at Trinity College Dublin. Her research focused on determining the underlying genetic cause of inherited retinal disease in patients who had not yet received a genetic diagnosis. Following this, Laura spent time working at the cancer genetics service at St. James' Hospital and worked with the genetic counselling team as a genomic associate, where she gained valuable insights into clinical genetics. Laura is currently working as a Senior Postdoctoral Researcher on the Irish arm of the European Genomic Data Infrastructure Project  in the FutureNeuro research centre at the Royal College of Surgeons in Ireland under the supervision of Professor Gianpiero Cavalleri. Laura has a keen interest in digital health, public and patient involvement in research and the integration of genomics into healthcare practice. </p>
+                              </div>
+                              
                             </div>
                           </div>
                         </div>
@@ -246,9 +252,30 @@
                             <div class="container">
                               <h2>Dr Siobhán Cleary</h2>
                               <p class="title">Genomics Research Training Manager</p>
-                              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                              <p>example@example.com</p>
-                              <p><button class="button">Contact</button></p>
+                              <button  class="modern-button">Biography</button>
+                              <div class="collapsible_content">
+                                <p>Siobhán earned a B.A (Mod) in Natural Science (Genetics) from Trinity
+                                  College Dublin in 2011 and an MSc in Bioinformatics with Systems
+                                  Biology from University College Cork in 2012. She then worked as a
+                                  Marie Curie Early-Stage Researcher on the "Identification of IGF
+                                  biomarkers in cancer", a collaborative project between UCC and Almac
+                                  Diagnostics, Craigavon. In 2014, Siobhán joined the West Midlands
+                                  Regional Genetics Laboratory (NHS) in Birmingham as a Bioinformatician
+                                  and worked on developing a prenatal diagnostics service for single
+                                  gene disorders within a clinical setting. In January 2017, Siobhán
+                                  returned to work in Almac Diagnostics as an NGS Bioinformatician to
+                                  help establish their Next Generation Sequencing (NGS) service. In
+                                  September 2018, she returned to academia to complete her PhD in
+                                  Bioinformatics at the University of Galway, under the supervision of
+                                  Professor Cathal Seoighe, and her research focused on analyzing clonal
+                                  mutations in cancer. In 2022, she took a 6-month break from her PhD to
+                                  serve as the acting Training Lead for the SFI-funded Centre for
+                                  Research Training in Genomics Data Science. Following her PhD in 2023,
+                                  Siobhán worked as the Research Data Management Coordinator at ELIXIR
+                                  Ireland before taking up the role of Genomics Research Training
+                                  Manager at GDI Ireland.</p>
+                              </div>
+                              
                             </div>
                           </div>
                         </div>                     
@@ -289,30 +316,29 @@
                             href="https://www.subscribepage.com/gdi_euproject" aria-label="mailchimp"><i
                                 class="icofont-letter has-text-primary is-size-1" title="Newsletter"></i></a></p>
                     <p class="mt-2"><a href="mailto:gdi-coordination@elixir-europe.org"
-                            class="underline">gdi-coordination@elixir-europe.org</a></p>
+                            class="underline">gdi-ireland@rcsi.ie</a></p>
                     <p><a href="accessibility.html">Accessibility</a></p>
                 </div>
             </div>
         </div>
     </footer>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const coll = document.querySelectorAll(".collapsible");
-  
-  for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var collapsible_content = this.nextElementSibling;
-      if (collapsible_content.style.display === "block") {
-        collapsible_content.style.display = "none";
-      } else {
-        collapsible_content.style.display = "block";
+      var coll = document.getElementsByClassName("modern-button");
+      var i;
+    
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var collapsible_content = this.nextElementSibling;
+          if (collapsible_content.style.display === "block" || collapsible_content.style.display === "") {
+            collapsible_content.style.display = "none";
+          } else {
+            collapsible_content.style.display = "block";
+          }
+        });
       }
-    });
-  }
-});
-      </script>
-
+    </script>
+    
 </body>
 
 </html>
