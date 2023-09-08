@@ -8171,8 +8171,8 @@ span[data-tooltip] {
 
   #mainNavBar {
     position: absolute;
-    left: 400px;
-    top: 50px;
+    left: 300px;
+    bottom: 50px;
   }
 
   .img-full-width {
