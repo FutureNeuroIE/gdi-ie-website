@@ -32,47 +32,94 @@
   </head>
 
   <body>
+<!--Code adapted from https://gdi.onemilliongenomes.eu-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDI Ireland Team</title>
+    <meta name="description"
+        content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta property="og:title" content="European Genomic Data Infrastructure (GDI) project">
+    <meta property="og:description"
+        content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gdi.onemillongenomes.eu/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GDI project">
+    <meta name="twitter:description"
+        content="The GDI project will deploy and operate a European infrastructure that facilitates access to genomic data by clinicians, researchers and innovators.">
+    <meta name="twitter:site" content="@GDI_EUproject">
+    <meta property="twitter:image" content="https://gdi.onemillongenomes.eu/twitter-home.jpg">
+    <meta property="twitter:image:alt" content="Image for the GDI project website.">
+    <link rel="stylesheet" href="../css/icofont.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer data-domain="gdi.onemilliongenomes.eu" src="https://plausible.io/js/script.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const burgerMenu = document.getElementById('burger-menu');
+        const navbarMenu = document.getElementById('mainNavBar');
+    
+        burgerMenu.addEventListener('click', function () {
+          this.classList.toggle('is-active');
+          navbarMenu.classList.toggle('is-active');
+        });
+      });
+    </script>
+
+</head>
+
+  <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div class="container" id="nav-container">
-            <div class="navbar-brand">
-              <a href="https://lauraannewhelan.github.io/GDI_IE_Website/">
-                  <img src="images/gdi-ireland-logo.png" width="200px" alt="B1MG logo" id="logo">
+        <div class="container" id="nav-container">
+          <div class="navbar-brand">
+            <a href="../index.html">
+              <img src="images/gdi-ireland-logo.png" width="150px" height="150px" alt="gdi-ireland-logo" id="logo2">
+            </a>
+            <!-- Add the burger menu button -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="burger-menu">
+              <span class="icon">
+                <i class="fas fa-bars"></i>
+              </span>
+            </a>
+          </div>
+          <!-- Wrap your navigation links in a div with the class "navbar-menu" -->
+          <div id="mainNavBar" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="../index.html" class="navbar-item px-4 is-active">
+                Home
               </a>
-              <div class="navbar-brand">
-                <a href="https://gdi.onemilliongenomes.eu/">
-                  <img src="images/gdi-logo.svg" width="200px" height="200px" alt="B1MG logo" id="logo2">
+              <!-- Add your other navigation links here -->
+              <div class="navbar-item is-hoverable">
+                <a href="../team/index.html" class="navbar-item">
+                  The Team
                 </a>
-            </div>
-  
-            <div id="mainNavBar" class="navbar-menu">
-              <div class="navbar-start">
-                <a href="https://lauraannewhelan.github.io/GDI_IE_Website/" class="navbar-item px-4 is-active">
-                  Home
-                </a>
-                <div class="navbar-item is-hoverable">
-                  <a href="/about/" class="navbar-item">
-                    The Team
-                  </a>
-                </div>
-                <div class="navbar-item is-hoverable">
-                  <a href="/about/" class="navbar-item">
-                    Patients and Participants
-                  </a>
-                </div>
-                <div class="navbar-item is-hoverable">
-                  <a href="../news/index.html" class="navbar-item">
-                    News
-                  </a>
-                </div>
-                <div class="navbar-item is-hoverable">
-                  <a href="./" class="navbar-item">
-                    Contact
-                  </a>
-                </div>
-  
               </div>
+              <div class="navbar-item is-hoverable">
+                <a href="../governance/index.html" class="navbar-item">
+                  Governance
+                </a>
+                <div class="navbar-item is-hoverable">
+                    <a href="index.html" class="navbar-item">
+                      Contact
+                    </a>
+                </div>
+                 <!-- Add your other navigation links here -->
+              <!-- ... -->
+            </div>
+          </div>
         </div>
-      </div></nav>
+    </nav>
 <main> 
   <section class="section pt-55 is-centered">
     <div class="container content has-text-grey-darker">
