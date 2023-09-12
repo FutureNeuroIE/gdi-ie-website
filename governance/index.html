@@ -43,111 +43,47 @@
       });
     </script>
 
-<style>
-  /* Initial style for the navigation menu (hidden on small screens) */
-
-  /* Style for the burger menu button icon */
-  .navbar-burger .icon {
-    color: #333;
-     /* Customize the color as needed */
-  }
-
-  /* Media query for small screens */
-  @media screen and (max-width: 768px) {
-    /* Show the navigation menu when the screen is small */
-    .navbar-menu.is-active {
-      display: block;
-    }
-    }
-
-    /* Ensure the navigation menu is always visible on larger screens */
-  @media screen and (min-width: 769px) {
-  .navbar-menu {
-  display: flex !important; /* Force display to override previous rules */
-      }
-  }
-
-  .rounded-image {
-            border-radius: 50%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 1cm;
-            margin-bottom: 1cm;
-            width: 50%;
-        }
-        
-  .collapsible_content {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  display: none; /* Set to 'none' by default */
-  overflow: hidden;
-}
-
-.active, .collapsible_content:hover {
-  background-color: #555;
-}
-
-</style>
-
 </head>
 
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container" id="nav-container">
-        <div class="navbar-brand">
-          <a href="https://gdi-ireland.github.io/GDI_IE_Website/team/index.html">
-            <img src="images/gdi-ireland-logo.png" width="150px" height="150px" alt="gdi-ireland-logo" id="logo2">
-          </a>
-          <!-- Add the burger menu button -->
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="burger-menu">
-            <span class="icon">
-              <i class="fas fa-bars"></i>
-            </span>
-          </a>
-        </div>
-      <!-- Wrap your navigation links in a div with the class "navbar-menu" -->
-        <div id="mainNavBar" class="navbar-menu">
-          <div class="navbar-start">
-            <a href="https://gdi-ireland.github.io/GDI_IE_Website/" class="navbar-item px-4 is-active">
-              Home
+        <div class="container" id="nav-container">
+          <div class="navbar-brand">
+            <a href="https://gdi.onemilliongenomes.eu/">
+              <img src="images/gdi-ireland-logo.png" width="150px" height="150px" alt="gdi-ireland-logo" id="logo2">
             </a>
-            <!-- Add your other navigation links here -->
-            <div class="navbar-item is-hoverable">
-              <a href="team/index.html" class="navbar-item">
-                The Team
+            <!-- Add the burger menu button -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="burger-menu">
+              <span class="icon">
+                <i class="fas fa-bars"></i>
+              </span>
+            </a>
+          </div>
+          <!-- Wrap your navigation links in a div with the class "navbar-menu" -->
+          <div id="mainNavBar" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="https://gdi-ireland.github.io/GDI_IE_Website/" class="navbar-item px-4 is-active">
+                Home
               </a>
+              <!-- Add your other navigation links here -->
+              <div class="navbar-item is-hoverable">
+                <a href="team/index.html" class="navbar-item">
+                  The Team
+                </a>
+              </div>
+              <div class="navbar-item is-hoverable">
+                <a href="/governance/index.html" class="navbar-item">
+                  Governance
+                </a>
+              <div class="navbar-item is-hoverable">
+                <a href="contact/index.html" class="navbar-item">
+                  Contact
+                </a>
+              </div>
+              <!-- Add your other navigation links here -->
+              <!-- ... -->
             </div>
-            <div class="navbar-item is-hoverable">
-              <a href="/about/" class="navbar-item">
-                Work Packages
-              </a>
-            </div>
-            <div class="navbar-item is-hoverable">
-              <a href="/about/" class="navbar-item">
-                Results
-              </a>
-            </div>
-            <div class="navbar-item is-hoverable">
-              <a href="news/index.html" class="navbar-item">
-                News
-              </a>
-            </div>
-            <div class="navbar-item is-hoverable">
-              <a href="contact/index.html" class="navbar-item">
-                Contact
-              </a>
-            </div>
-            <!-- Add your other navigation links here -->
-            <!-- ... -->
           </div>
         </div>
-      </div>
-  </nav>
+    </nav>
+  
