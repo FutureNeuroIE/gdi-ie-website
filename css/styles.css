@@ -7976,9 +7976,6 @@ figure.is-pulled-right {
   */
 @media only screen and (max-width: 700px) {
 
-  #logo2 {
-    position: left;
-  }
   table,
   thead,
   tbody,
@@ -8158,9 +8155,6 @@ span[data-tooltip] {
   */
 @media only screen and (min-width: 1024px) {
 
-  #logo2 {
-    position: left;
-  padding-top: 50px; }
 
   .navbar {
     padding: 10px 500px 10px 10px; }
@@ -8171,7 +8165,7 @@ span[data-tooltip] {
 
   #mainNavBar {
     position: absolute;
-    left: 500px;
+    left: 400px;
     bottom: 50px;
   }
 
