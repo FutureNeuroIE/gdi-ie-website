@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDI-Ireland</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../images/gdi_ireland_logo.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about/index.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/team/index.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/collaborators/index.html" class="nav-link">Collaborators</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/news/index.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/governance/index.html" class="nav-link">Governance</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+    
+        hamburger.addEventListener("click", mobileMenu);
+    
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+
+    <section>
+        <div class="container">
+            <!-- News Card 1 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://www.linkedin.com/posts/genomic-data-infrastructure-ireland_yesterday-participants-representing-over-activity-7262077563668250624-yblu?utm_source=share&utm_medium=member_desktop">
+                        <img src="images/nov11_event.jpeg" alt="An infographic that reads do you want to help genomics research in Ireland? The genomic data infrastructure project is keen to work with individuals interested in any of the following areas: genetics research, data privacy, rare diseases, cancer, science communication, science education. Question? email LauraWhelan@rcsi.ie and an image of the FutureNeuro PPI panel">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 11 November 2024</p>
+                    <p class="news-title">GDI Ireland hosts workshop on considerations for the host location of a genomic data infrastructure in Ireland</p>
+                    <p class="news-description">
+                        Representatives from over 20 organisations joined our workshop, including GDI colleagues from Denmark and Portugal. Discussions focused on clinical, technical, and ethical issues surrounding genomic data in Ireland.</p>
+                    <a href="https://www.linkedin.com/posts/genomic-data-infrastructure-ireland_yesterday-participants-representing-over-activity-7262077563668250624-yblu?utm_source=share&utm_medium=member_desktop" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://gdi.onemilliongenomes.eu/news/second-gdi-stakeholder-forum">
+                        <img src="images/2nd-gdi-stakeholder-forum.png" alt="An infographic that reads do you want to help genomics research in Ireland? The genomic data infrastructure project is keen to work with individuals interested in any of the following areas: genetics research, data privacy, rare diseases, cancer, science communication, science education. Question? email LauraWhelan@rcsi.ie and an image of the FutureNeuro PPI panel">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 10 October 2024</p>
+                    <p class="news-title">GDI Ireland participates in 2nd GDI Europe stakeholder forum for patients and citizens</p>
+                    <p class="news-description">GDI Ireland presented a case study of their public and patient involvement work to act as an example to other countries involved in GDI.</p>
+                    <a href="https://gdi.onemilliongenomes.eu/news/second-gdi-stakeholder-forum" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://twitter.com/GDI_Ireland/status/1747591570541473905">
+                        <img src="images/PPI.png" alt="An infographic that reads do you want to help genomics research in Ireland? The genomic data infrastructure project is keen to work with individuals interested in any of the following areas: genetics research, data privacy, rare diseases, cancer, science communication, science education. Question? email LauraWhelan@rcsi.ie and an image of the FutureNeuro PPI panel">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 17 January 2024</p>
+                    <p class="news-title">GDI Ireland launches call for PPI contributors</p>
+                    <p class="news-description">GDI Ireland is seeking expressions of interest from patients and members of the public who want to shape genetics research in Ireland.</p>
+                    <a href="https://twitter.com/GDI_Ireland/status/1747591570541473905" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+
+                        <!-- News Card 1 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://gdi.onemilliongenomes.eu/news/1+MG-framework-and-roadmap-launch">
+                        <img src="images/1+MG-FW.png" alt="1+MG Framework and roadmap launch. the 1+mg and b1+mg logo are visisble along with a timeline of events for the roadmap">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 15 November 2023</p>
+                    <p class="news-title">The 1+MG Framework and Roadmap is launched</p>
+                    <p class="news-description">The 1+ Million Genomes (1+MG) Initiative launched the 1+MG Framework website and adopted the 1+MG Roadmap 2023-27.</p>
+                    <a href="https://gdi.onemilliongenomes.eu/news/1+MG-framework-and-roadmap-launch" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+
+    
+            <!-- News Card 2 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://gdi.onemilliongenomes.eu/news/gdi-stakeholder-forum">
+                        <img src="images/GDI-SF.png" alt="An infographic with the GDI europe logo, reading 1st GDI stakeholder forum 23-Nov 2023 12:00-17:00 CET online">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">Event | 23 November 2023</p>
+                    <p class="news-title">First virtual European Genomic Data Infrastructure (GDI) Stakeholder Forum</p>
+                    <p class="news-description">The aim of the GDI Stakeholder Forum is to disseminate project information, updates, and outcomes to invited stakeholders.</p>
+                    <a href="https://gdi.onemilliongenomes.eu/news/gdi-stakeholder-forum" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- News Card 3 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://gdi.onemilliongenomes.eu/news/gdi-starter-kit">
+                        <img src="images/GDI-SK.png" alt="An infographic highlighting the launch of the GDI project starter kit. It reads GDI starter kit to enable access across borders to genomic and phenotypic data">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 26 June 2023</p>
+                    <p class="news-title">The GDI project starter kit is newly launched to sharing genomic data across Europe</p>
+                    <p class="news-description">The European Genomic Data Infrastructure (GDI) project has released a ‘Starter Kit’ based on the rare disease and cancer proof-of-concepts from the Beyond 1 Million Genomes (B1MG) project.</p>
+                    <a href="https://gdi.onemilliongenomes.eu/news/gdi-starter-kit" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- News Card 4 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://gdi.onemilliongenomes.eu/news/gdi-project-launched">
+                        <img src="images/launch.png" alt="An infographic with the euopean genomic data infrastructure logo.">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 17 November 2022</p>
+                    <p class="news-title">The Genomic Data Infrastructure project launched</p>
+                    <p class="news-description">The aim of the GDI project is to realize the 1+MG initiative’s ambition of creating a data infrastructure that will enable secure access to genomics and corresponding clinical data across Europe.</p>
+                    <a href="https://gdi.onemilliongenomes.eu/news/gdi-project-launched" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- Repeat similar structure for other news cards -->
+    
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <form action="#" method="post" class="contact-form">
+                            <div class="left-content">
+                                <h4>Questions? Get in touch!</h4>
+                                <h6>Please note that as this is a research project, we are not in a position to respond to medical queries. If you have questions related to medical issues, we advise consulting a qualified healthcare professional.</h6>
+                                <br>
+                                <a href="mailto:gdi-ireland@rcsi.ie">Click here to contact us.</a>
+                                <br>
+                                <br>
+                                <div class="social-icons">
+                                    <a href="https://www.linkedin.com/company/genomic-data-infrastructure-ireland/?originalSubdomain=ie" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://twitter.com/GDI_Ireland" target="_blank"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <form action="submit_form.php" method="post" class="contact-form">
+                            <div class="right-content">
+                                <h4>Research Funding</h4>
+                                <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GDI-IE-2022-1.</h6>
+                                <div class="footer-image-container">
+                                    <img src="images/eu-flag.png" alt="European union flag" class="footer-image eu-flag">
+                                    <img src="images/HRB-logo.jpg" alt="health research board logo" class="footer-image hrb-logo">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+                </section>
+</body>
+</html>

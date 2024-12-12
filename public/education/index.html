@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Resources - GDI-Ireland</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // Filter based on audience tags
+        function filterResources(audience) {
+            if (audience === 'all') {
+                $('.resource-card').show();
+            } else {
+                $('.resource-card').hide();
+                $('.resource-card[data-audience="' + audience + '"]').show();
+            }
+        }
+
+        // Document ready function
+        $(document).ready(function () {
+            // Add click event to filter buttons
+            $('.filter-button').click(function () {
+                var audience = $(this).data('audience');
+                filterResources(audience);
+            });
+        });
+    </script>
+</head>
+
+<body>
+<!-- Include jQuery -->
+
+
+<header>
+    <div class="nbar">
+      <a href="../index.html"><i class="fa-solid fa-house"></i> <b>Home</b></a>
+          <a href="/about/index.html">About Us</a>
+          <a href="/team/index.html">The Team</a>
+          <a href="/collaborators/index.html">Collaborators</a>
+          <a href="/impact/index.html">Impact</a>
+          <a href="/news/index.html">News</a>
+          <a href="/governance/index.html">Governance</a>
+    </div>
+  </header>
+        
+      <div class="coming-soon">
+        <h2>Coming Soon!</h2>
+        <p>We are working on something exciting. Stay tuned for updates!</p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form action="#" method="post" class="contact-form">
+                        <div class="left-content">
+                            <h4>Questions? Get in touch!</h4>
+                            <h6>Please note that our project is focused on research and does not respond to medical queries. If you have questions related to medical issues, we advise consulting a qualified healthcare professional.</h6>
+                            <br>
+                            <a href="mailto:gdi-ireland@rcsi.ie">Click here to contact us.</a>
+                            <br>
+                            <br>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/company/genomic-data-infrastructure-ireland/?originalSubdomain=ie" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com/GDI_Ireland" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form action="submit_form.php" method="post" class="contact-form">
+                        <div class="right-content">
+                            <h4>Research Funding</h4>
+                            <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GDI-IE-2022-1.</h6>
+                            <div class="footer-image-container">
+                                <img src="images/eu-flag.png" alt="The European union flag" class="footer-image eu-flag">
+                                <img src="images/HRB-logo.jpg" alt="the health research board logo" class="footer-image hrb-logo">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer></body>
+
+</html>

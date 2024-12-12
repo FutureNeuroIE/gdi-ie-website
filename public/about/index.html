@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDI-Ireland</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="../images/gdi_ireland_logo.png">
+
+</head>
+
+<body class="goal-body">
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about/index.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/team/index.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/collaborators/index.html" class="nav-link">Collaborators</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/news/index.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/governance/index.html" class="nav-link">Governance</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+    
+        hamburger.addEventListener("click", mobileMenu);
+    
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+
+
+<div class="about-us">
+  <h2><b>About Genomic Data Infrastructure Ireland</b></h2>
+  <br>
+  <h5 class="is-size-5"><b>Genomic Data Infrastructure (GDI) Ireland</b> is the Irish arm of the <a href="https://gdi.onemilliongenomes.eu/" style="color: #7276B1; font-weight: bold;"> European
+      GDI project</a> which aims to create federated genetic data infrastructures across Europe to allow for safe and secure sharing of genomic data.
+        <p><a href="https://gdi.onemilliongenomes.eu/about/key-terms" style="color: #7276B1;" target="_blank">Click here to learn about key terms related to genetics and genomics.</a></p>
+        <br>
+
+
+A <b>federated genetic data infrastructure</b> will allow countries taking part in the project to collaboratively share data while storing the data in their own country. This <b>ensures data privacy and protection</b>. Access to analyse the data will only be granted to individuals after a review process.
+<br>
+<br>
+      Ireland has committed to the <b>onboarding stage</b> of the overall European GDI project, which means that over the next 4 years we will develop a <b>proof-of-concept infrastructure that will be tested using artificial genetic data first</b>. This is to ensure that the infrastructure works correctly and is safe and secure. 
+      </p>
+
+      <div style="text-align: center; max-width: 100%;">
+        <img src="images/gdi-numbers.png" alt="This image displays some summary statistics about the European GDI project. There are 24 European countries involved. At least 5 will be technically operational by 2024, at least 15 by 2026. 2 international organisations ELIXIR and BBMRI-ERIC are involved. A map of the European countries involved is displayed to the right of the image" style="max-width: 100%;">
+    </div>
+            <br>
+      <br>
+      This work follows the <a href="https://b1mg-project.eu/" style="color: #7276B1; font-weight: bold;">Beyond 1 Million Genomes
+          (B1MG)</a> project and is part of the implementation of the <a href="https://digital-strategy.ec.europa.eu/en/policies/1-million-genomes" style="color: #7276B1; font-weight: bold;">1+Million
+              Genomes (1+MG) initiative</a>, which Ireland officially joined in 2022.
+              <br>
+              <br>
+              <br>
+              <div style="text-align: center; max-width: 100%;">
+                <img src="images/timeline.png" alt="This image is a timeline of the 1+ million genomes initiative. First we see the 1+ million genomes logo which is a blue and white circle in the shape of 3 faces. Under this text reads 2018-present 1+MG launched as an EU member states declaration. Next is the beyond one million genomes logo which is the same as the 1+mg logo but is green. Text underneath this reads 2020-2023 B1MG coordinated agreement on standards and best practices. Next is the genomic data infrastructure project logo. It is a collection of interconnected circles that make a sphere shape. Text underneath this reads 2022-2026, GDI is creating the infrasructure needed to realise 1+MG. A green box next to this shows the Irish national strategy for accellerating genetic and genomic medicine in Ireland at the same point in the timeline. " style="max-width: 100%;">
+            </div>
+      
+</div>
+
+<section class="about-us-section">
+    <div class="columns" id="column1">
+      <div class="column pr-3-desktop">
+        <h2><b>This will be achieved by addressing 6 main activities:</b></h2>
+        <br>
+        <br>
+        <style>
+            /* Regular styles for objectives */
+            .objective {
+              opacity: 0; /* Start with opacity 0 */
+              transition: opacity 0.5s ease-in-out; /* Apply transition for smooth animation */
+            }
+        
+            .fade-in {
+              opacity: 1; /* Make the element visible */
+            }
+          </style>
+        <ul>
+          <li class="mb-4 objective"><strong>1:</strong> Collaborate with expert stakeholders in Ireland including the Dept. of Health, HSE, healthcare professionals, researchers, patients and the public.</li>
+  
+          <li class="mb-4 objective"><strong>2:</strong> Create a long-term sustainaility plan for the infrastructure.</li>
+  
+          <li class="mb-4 objective"><strong>3:</strong> Develop a proof-of-concept genetic data infrastructure.</li>
+  
+          <li class="mb-4 objective"><strong>4:</strong> Ensure that any data that enters the infrastructure is stored safely and securely in line with national and European standards.</li>
+  
+          <li class="mb-4 objective"><strong>5:</strong> Work with patients, the public, researchers and healthcare professionals to design a public Irish genome sequencing project.</li>
+  
+          <li class="mb-4 objective"><strong>6:</strong> Create and share training materials for users of the infrastructure.</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Function to handle the Intersection Observer callback
+          function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target); // Stop observing once faded in
+              }
+            });
+          }
+    
+          // Create Intersection Observer
+          const observer = new IntersectionObserver(handleIntersection, {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px', // No margin around the root
+            threshold: 0.2 // Trigger when 20% of the element is visible
+          });
+    
+          // Get all objectives
+          const objectives = document.querySelectorAll('.objective');
+    
+          // Observe each objective
+          objectives.forEach(objective => {
+            observer.observe(objective);
+          });
+        });
+      </script>
+      </section>  
+
+  </body>
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <form action="#" method="post" class="contact-form">
+                    <div class="left-content">
+                        <h4>Questions? Get in touch!</h4>
+                        <h6>Please note that as this is a research project, we are not in a position to respond to medical queries. If you have questions related to medical issues, we advise consulting a qualified healthcare professional.</h6>
+                        <br>
+                        <a href="mailto:gdi-ireland@rcsi.ie">Click here to contact us.</a>
+                        <br>
+                        <br>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/company/genomic-data-infrastructure-ireland/?originalSubdomain=ie" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/GDI_Ireland" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <form action="submit_form.php" method="post" class="contact-form">
+                    <div class="right-content">
+                        <h4>Research Funding</h4>
+                        <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GDI-IE-2022-1.</h6>
+                        <div class="footer-image-container">
+                            <img src="images/eu-flag.png" alt="The european union flag" class="footer-image eu-flag">
+                            <img src="images/HRB-logo.jpg" alt="the health research board logo" class="footer-image hrb-logo">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    </body>
+    </html>

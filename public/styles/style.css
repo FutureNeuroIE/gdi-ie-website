@@ -1,0 +1,1355 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font family for the entire document */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+
+/* Common styles for headings and paragraphs */
+h1, h2, h3, p {
+    font-family: Arial, sans-serif; /* Override font family if needed */
+}
+
+h1, {
+    text-align: center;
+}
+
+/* Header styles */
+.header {
+    border-bottom: 1px solid #7B1C58;
+    background-color: #7B1C58;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation menu styles */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #FFD895;
+}
+
+/* Hamburger menu styles for small screens */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #7B1C58;
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        color: #FFD895;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #7B1C58;
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        color: #FFD895;
+    }
+}
+
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.logo {
+    height: 100px;
+    width: 250px;
+    border-radius: 95px;
+}
+
+.container {
+    color: #4a4a4a;
+}
+
+.footer-container {
+    color: #4a4a4a;
+    background-color: white;
+    display: inline-block;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.info {
+    text-align: center;
+    font-size: xx-large;
+    padding: 50px;
+    color: #4a4a4a;
+    opacity: 1;
+    background-color: none;
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .info {
+        text-align: center;
+        font-size: large;
+        padding: 50px;
+        color: #4a4a4a;
+        opacity: 1;
+        background-color: none;
+    }
+    }
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* Set the desired opacity for the background image */
+    z-index: -1; /* Place the background image behind the content */
+}
+
+
+
+.logo-container {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value as needed */
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.main-logo img {
+    max-width: 100%;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 20%;
+}
+
+
+/* Define the fadeIn animation using keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-section {
+    padding: 50px;
+    background-color: #7B1C58;
+    color: white;
+}
+
+.footer {
+    padding: 50px;
+    background-color: #7B1C58;
+}
+
+.footer img {
+    padding: 10px;
+    height: auto;
+}
+
+.footer p {
+    padding: 10px;
+    font-size: x-small;
+}
+
+.logo-container img {
+    height: 100%;
+    max-width: 100%;
+    padding: 30px;
+    
+}
+
+
+.collabs {
+    background: none; /* Remove background property from #home */
+    color: white;
+}
+
+.img-hrb {
+    max-width: 100%;
+    height: auto;
+    max-height: 180px; 
+}
+
+.collab-statement {
+    display: block; /* Ensure it behaves as a block element */
+    text-align: center; /* Center the text horizontally */
+    margin-top: 20px; /* Adjust as needed */
+    margin-left: auto; /* Center the element horizontally */
+    margin-right: auto; /* Center the element horizontally */
+    width: max-content; /* Allow the element to take up only the necessary width */
+}
+
+
+/* Optionally, you can set opacity for the background image */
+.collabs::before {
+    content: "";
+    background: url('/images/gdi_eu_logo.png') center center/cover fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* Set the desired opacity for the background image */
+    z-index: -1; /* Place the background image behind the content */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #7276B1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFD895;
+    color: #7276B1;
+}
+
+.team-member-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    background-color: white;
+    padding-top: 20px;
+}
+
+.member-card {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move them down initially (optional) */
+    transition: opacity 0.5s, transform 0.2s;
+    z-index: 1000;
+}
+
+.member-card.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring them back up on scroll */
+}
+
+.member-card p {
+    font-size: small;
+    margin: 5px 0; /* Add margin to top and bottom to separate paragraphs */
+}
+
+.member-card h3 {
+    font-size: large;
+    font-weight: bold;
+    margin: 10px 0; /* Add margin to top and bottom */
+}
+
+.member-image {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 999;
+    width: 200px; /* Set width */
+    height: 200px; /* Set height */
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the entire image is visible */
+}
+
+.member-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    margin: 50px;
+}
+
+.member-content h3 {
+    font-size: large;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for truncated text */
+    white-space: nowrap; /* Prevent wrapping */
+    max-width: 200px; /* Limit the width of the title container */
+    text-align: center; /* Center-align text */
+}
+
+.member-card:hover .member-image img {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.member-card:hover .bio-popup-trigger {
+    display: block;
+}
+/* Bio Popup Trigger styling */
+.bio-popup-trigger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7276B1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Bio Dropdown styling */
+.bio-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px; /* Set a maximum width if necessary */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Set a higher z-index value */
+    display: none; /* Initially hidden */
+    text-align: left; /* Adjust this property as needed */
+}
+
+/* Full-width close button */
+.bio-dropdown .close-btn {
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: right;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.bio-dropdown .close-btn:hover {
+    color: #555;
+    z-index: 1;
+}
+
+/* Add this style for the modal */
+.bio-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 2000px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.bio-modal .bio-content {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.bio-modal .close-btn {
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: right;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.bio-modal .close-btn:hover {
+    color: #555;
+    z-index: 1;
+}
+
+/* Add overflow-y to the bio-modal class */
+.bio-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 2000px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Set a maximum height for the modal */
+}
+
+.bio-modal .bio-content {
+    font-size: 16px;
+    margin-bottom: 15px;
+    /* Add padding if necessary */
+    padding-right: 20px; /* Adjust as needed */
+}
+
+.bio-modal .close-btn {
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: right;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.bio-modal .close-btn:hover {
+    color: #555;
+}
+
+
+/* Updated CSS without color change on hover */
+
+/* Style for the table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    padding: 10px; /* Add padding to the entire table */
+}
+
+/* Style for the table container */
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Style for table header */
+th {
+    background-color: #7B1C58;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for table rows */
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for table cells */
+td {
+    padding: 10px;
+}
+
+/* Apply alternate background color to even rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Add some spacing below the table */
+.bordered {
+    margin-bottom: 20px;
+}
+
+/* Make the table responsive for mobile */
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 0.8em; /* Adjust the font size for smaller screens */
+        padding: 200px;
+        width: 75%;
+        margin: 65px;
+    }
+}
+
+
+/* Collaborator Card Wrapper */
+.collaborator-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.collaborator-card-wrapper::before {
+    content: "";
+    background: url('/images/gdi_eu_logo.png') center center/cover fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* Set the desired opacity for the background image */
+    z-index: -1; /* Place the background image behind the content */
+}
+
+/* Collaborator Card */
+.collaborator-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.collaborator-card:hover {
+    transform: scale(1.05);
+}
+
+/* Collaborator Image */
+.collaborator-image img {
+    width: 100%;
+    height: 200px;
+    object-fit:scale-down;
+    border-radius: 8px;
+}
+
+/* Collaborator Details */
+.collaborator-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.collaborator-card p {
+    color: #555;
+    margin: 8px 0;
+}
+
+/* Additional Styling (Adjust as needed) */
+.collaborator-card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.collaborator-card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Reset some default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Apply a common font-family to specified elements */
+body, h1, h2, h3, p, ul, li {
+    font-family:  font-family: Arial, sans-serif;
+}
+
+
+/* Main section styles */
+.container {
+    background-color: white;
+    color: #4a4a4a;
+    padding: 20px;
+}
+
+
+/* Footer styles */
+.footer {
+    padding: 50px;
+    background-color: #7B1C58;
+    color: white;
+}
+
+.footer img {
+    padding: 10px;
+    height: auto;
+}
+
+.footer p {
+    padding: 10px;
+    font-size: x-small;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #7276B1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFD895;
+    color: #7276B1;
+}
+
+/* Container styles */
+.container.content {
+    color: #4a4a4a;
+}
+
+/* Columns styles */
+.columns {
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+/* Column styles */
+
+
+/* News card styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.news-card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.news-image {
+    flex: 0 0 40%;
+    margin-right: 20px;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-date {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+ /* Your existing styles */
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .resource-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .resource-title {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .resource-description {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .read-more {
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* New styles for filter buttons */
+        .filter-buttons {
+            margin-bottom: 20px;
+        }
+
+        .filter-button {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .goal-body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .goal-section {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .goal-card {
+            margin: 10px 0;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .goal-card h2 {
+            color: #7B1C58;
+        }
+        
+        .goal-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .goal-card h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .goal-card p {
+            color: #555;
+        }
+        
+        .about-us {
+            margin-top: 20px;
+            padding: 50px;
+            padding-bottom: 50px;
+            box-sizing: border-box;
+        }
+
+        .explain-img {
+            width: 500px; /* Set the default width */
+        }
+        
+        /* Hide the image on smaller screens */
+        @media (max-width: 767px) {
+            .explain-img {
+                
+            }
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        /* Add media query for responsiveness */
+        @media screen and (max-width: 768px) {
+            .goal-card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+        
+
+        .about-us-section {
+            padding: 50px;
+            background: linear-gradient(to right, #7B1C58, #7276B1); /* Gradient background */
+            color: white;
+            border-radius: 15px;
+            margin: 50px;
+        }
+
+        .objective {
+            opacity: 0; /* Start with opacity 0 */
+            transition: opacity 0.5s ease-in-out; /* Apply transition for smooth animation */
+          }
+        
+          .fade-in {
+            opacity: 1; /* Make the element visible */
+          }
+        
+          /* Define keyframes for the animation */
+          @keyframes fadeInLeft {
+            from {
+              opacity: 0;
+              transform: translateX(-20px); /* Move from left */
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0); /* Move to original position */
+            }
+          }
+        
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        h2 {
+            font-size: 2rem; /* Larger font size */
+            margin-bottom: 20px;
+            text-align: center; /* Center align */
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 1rem;
+            line-height: 1.6; /* Increased line height */
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        /* Fun animation for list items */
+        li {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        /* Additional styles for smaller screens */
+        @media (max-width: 768px) {
+            .column {
+                flex: 0 0 100%; /* Full width for smaller screens */
+                margin-bottom: 20px; /* Add some space between stacked columns */
+            }
+        }
+        
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Additional styles for smaller screens */
+        @media (max-width: 768px) {
+            .column {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+/* CSS for the expandable content */
+.expandable-content {
+    display: none;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.expanded .expandable-content {
+    display: inline;
+}
+
+.expand-button {
+    background-color: #7B1C58;
+    border: none;
+    color: #FFD895;
+    padding: 6px 12px; /* Adjust padding to make it smaller */
+    font-size: 14px; /* Adjust font size */
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* Remove outline */
+    display: inline-block; /* Make it inline with the text */
+    margin-top: 10px; /* Adjust vertical spacing */
+}
+
+.expand-button:hover,
+.expand-button.expanded {
+    background-color: #7B1C58;
+}
+
+.expand-button:focus {
+    outline: none; /* Remove outline even when button is focused */
+}
+
+.expand-button::-moz-focus-inner { /* Remove extra inner border in Firefox */
+    border: 0;
+}
+
+.vision-mission-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.vision,
+.mission {
+    opacity: 0; /* Initially hide the sections */
+    transition: opacity 1s ease;
+    text-align: center; /* Center text */
+}
+
+.scrolled .vision {
+    opacity: 1;
+    animation: fadeFromLeft 1s ease; /* Apply left animation to vision section */
+}
+
+.scrolled .mission {
+    opacity: 1;
+    animation: fadeFromRight 1s ease; /* Apply right animation to mission section */
+}
+
+@media (max-width: 768px) {
+    .vision-mission-container {
+        flex-direction: column; /* Stack vision and mission sections vertically */
+    }
+
+    .vision,
+    .mission {
+        opacity: 1; /* Show the sections */
+        transition: none; /* Remove transition */
+        animation: none; /* Remove animation */
+        margin-bottom: 20px; /* Add some space between the sections */
+    }
+}
+
+
+@keyframes fadeFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* For larger screens */
+
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .about-us-section .columns {
+        flex-direction:inherit; /* Stack columns vertically */
+    }
+
+    .about-us-section .column {
+        flex: 0 0 100%; /* Full width for smaller screens */
+        
+    }
+}
+
+flex-container {
+    display: flex;
+    flex-direction: row; /* Display the items in a row */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.flex-item {
+    flex: 1; /* Equal width for both items */
+    padding: 0 20px; /* Add some spacing between items */
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.justify-content-center {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.contact-form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.left-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.right-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+/* Optional: Add more styling as needed */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px; /* Adjust margin as needed */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Add styling for the research funding section */
+.footer .row {
+    margin-bottom: 20px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+/* Style for the social icons */
+.social-icons {
+    display: flex; /* Arrange icons in a row */
+}
+
+.social-icons a {
+    display: inline-block; /* Prevent line break */
+    margin-right: 10px; /* Add space between icons */
+    font-size: 24px; /* Adjust icon size */
+    color: #333; /* Change icon color */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change icon color on hover */
+}
+
+.footer-image-container {
+    display: flex; /* Arrange images in a row */
+}
+
+.footer-image {
+    height: auto; /* Maintain aspect ratio */
+}
+
+.eu-flag {
+    width: 150px; /* Set the width of the EU flag image */
+    margin-right: 20px;
+}
+
+.hrb-logo {
+    width: 100px; /* Set the width of the HRB logo image */
+}
+
+.responsive-image {
+    max-width: 100%; /* Set the maximum width of the image to its container */
+    max-height: 100%; /* Set the maximum height of the image to its container */
+    width: auto; /* Allow the width to adjust proportionally */
+    height: auto; /* Allow the height to adjust proportionally */
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    opacity: 1; /* If you want to set opacity, do it here */
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .footer-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-image {
+        margin-bottom: 10px; /* Add spacing between the images */
+        margin: 30px;
+    }
+}
+
+.collaborator-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the images horizontally */
+}
+
+.collaborators-section {
+    padding: 50px 0;
+  }
+
+  .collaborator-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collaborator-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .collaborator-name {
+    font-size: 24px;
+    margin-top: auto; /* Pushes description to bottom */
+  }
+
+  .collaborator-description {
+    color: #555;
+  }
+
+
+  ul {
+    font-size: 20px; /* Change the font size to your desired value */
+  }

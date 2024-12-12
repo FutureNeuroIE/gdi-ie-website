@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDI-Ireland</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../images/gdi_ireland_logo.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about/index.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/team/index.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/collaborators/index.html" class="nav-link">Collaborators</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/news/index.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/governance/index.html" class="nav-link">Governance</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+    
+        hamburger.addEventListener("click", mobileMenu);
+    
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+            
+
+            <section class="home">
+                <div class="logo-container">
+                  <div class="flex-container">
+                    <div class="flex-item">
+                      <h1 class="info">A diverse team with expertise in human genetics, bioinformatics, data governance in addition to public and patient contributors work on Genomic Data Infrastructure (GDI) Ireland.</h1>
+                    </div>
+            
+                    </div>
+                </div>
+            </div>
+            </section>
+            
+    <div class="team-member-wrapper col-lg-12">
+        <div class="team-member-wrapper col-lg-12">
+            <div class="text-center">
+                <h1>Core management team</h1>
+            </div>
+            <div class="padding-bottom: 20px;">
+            </div>
+        </div>
+             <div class="member-card">
+            <div class="member-image">
+                <img src="images/GC.png" alt="A headshot of Prof Gianpiero Cavalleri">
+            </div>
+            <br>
+            <h3>Gianpiero Cavalleri</h3>
+            <p>Professor of Human Genetics</p>
+            <p>Royal College of Surgeons <br>Ireland</p>
+            <br>
+            <p style="font-size:small;"> Gianpiero is co-lead of GDI Ireland and is coordinating activities focused on long-term sustainability and a designing public genome sequencing project. </p>
+            <div class="bio-dropdown">
+                <p>Gianpiero Cavalleri is Professor of Human Genetics, Deputy Director of the SFI FutureNeuro Research Centre and Director of the Human Genetic Variation Research Group at RCSI. Prof. Cavalleri is also Deputy Director (Translational Research) of the RCSI Office of Research and Innovation. Gianpiero was awarded a Ph.D. in human genetics at University College London in 2006. Prior to his arrival at RCSI, he worked at the Institute for Genome Science and Policy at Duke University, North Carolina. He was appointed to faculty at RCSI in 2008. Prof. Cavalleri has published over 160 articles in leading peer reviewed international journals including Nature, Nature Genetics, PNAS and the New England Journal of Medicine. AHis research group works at the interface of computational biology, clinical diagnostics and population genetics.</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/DS.png" alt="A headshot of Prof Denis Shields">
+            </div>
+            <br>
+            <h3>Denis Shields</h3>
+            <p>Professor of Clinical Bioinformatics</p>
+            <p>University College Dublin</p>
+            <br>
+            <p style="font-size:small;">Denis is co-lead of GDI Ireland and is coordinating activities focused on education and training researchers, healthcare professionals, patients and the public.</p>
+
+            <div class="bio-dropdown">
+                <p>Denis Shields studied genetics, bioinformatics, and molecular evolution (completing a PhD with Paul Sharp at Trinity College Dublin). He worked in the University of Southampton on genetics with Newton Morton, and in companies on clinical trials and genetics (as Biometrics Manager in ICON, Dublin, and as Managing Director of Surgen Ltd, Dublin). He has been in University College Dublin as Professor of Clinical Bioinformatics since 2005, where he set up the Bioinformatics and Systems Biology PhD programme (over 90 students since commencement in 2007) and is Director of the UCD Centre for Bioinformatics, based in the Conway Institute of Biomolecular and Biomedical Research. His main research interest is to better understand the evolution and interaction of short bioactive peptides, including those embedded within proteins and those released during food digestion. He teaches modules in Bioinformatics and in Personalised Medicine to undergraduates.</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/AC.png" alt="A headshot of prof Aedin Culhane2">
+            </div>
+            <br>
+            <h3>Aedín Culhane</h3>
+            <p>Professor of Biomedical Sciences (Cancer Genomics)</p>
+            <p>University of Limerick</p>
+            <br>
+            <p style="font-size:small;">Aedin is leading the technical implementation of GDI Ireland. This involves using software designed by European experts to handle genetic data.</p>
+
+            <div class="bio-dropdown">
+                <p>Aedín Culhane is a Professor of Biomedical Sciences (Cancer Genomics) in the UL School of Medicine. She is a computational oncologist with expertise in multi-omics data integration, statistical genomics, clinical bioinformatics, and genomics in oncology. She has over 20 years’ experience in cancer genomics, of which over 15 years were in the Dana-Farber Cancer Institute and Harvard TH Chan School of Public Health in Boston, USA. Her recent research focuses on algorithm development and integrative data of single cell molecular data in cancer to identify molecules that regulate and can be targeted during tumor development, progression, drug response, and resistance. She is a member of the Human Cell Atlas (https://www.humancellatlas.org) project. She is a leader in the Bioconductor (www.bioconductor.org) community, a global open source, open development software in R for genomics, and an advocate for open-source science.</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/MH.png" alt="A headshot of prof Markus Helfert">
+            </div>
+            <br>
+            <h3>Markus Helfert</h3>
+            <p>Professor in Digital Service Innovation</p>
+            <p>Maynooth University</p>
+            <br>
+            <p style="font-size:small;">Markus is leading activities focused on data governance. This involves reviewing other European countries' approach to data access and legal implelemtation. </p>
+            <div class="bio-dropdown">
+                <p>Markus Helfert is Professor in Digital Service Innovation at Maynooth University, Innovation Value Institute (Ireland) and the Director of the Business Informatics Group at Maynooth University. He is a Principle Investigator at Lero – The Irish Software Research Centre and at the Adapt Research Centre. His research is centered on Digital Service Innovation, Smart Cities and IoT-based Smart Environments and includes research areas such as Service Innovation, Intelligent Transportation Systems, Smart Services, Building Information Management, FinTech, Data Value, Enterprise Architecture, Technology Adoption, Analytics, Business Process Management. Prof. Helfert is an expert in Data Governance Standards and is involved in European Standardization initiatives. Markus Helfert has authored more than 200+ academic articles, journal and book contributions and has presented his work at international conferences. Helfert has received national and international grants from agencies such as European Union (FP7; H2020), Science Foundation Ireland, and Enterprise Ireland, was project coordinator on EU projects, and is the Project coordinator of the H2020 Projects: PERFORM on Digital Retail.</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/DM.jpeg" alt="A headshot of Denise Manton">
+            </div>
+            <br>
+            <h3>Denise Manton</h3>
+            <p>Executive Director for <br>Empower</p>
+            <p>Maynooth University</p>
+            <br>
+            <p style="font-size:small;">Denise also works on activities related to data governance. </p>
+
+            <div class="bio-dropdown">
+                <p>Denise is the Executive Director for Empower, the data governance research program. She drives the long-term strategic planning of this multi-million Euro research program. Denise is also the CEO and Co-founder of Cadova Health, an AI-based medtech start-up focused on early detection of breast cancer. Cadova Health is a Lero and University of Limerick spin-out co-founded with Prof. Conor Ryan, Director of the Biocomputing and Developmental Systems (BDS) Group @ UL. She has also held senior management roles focused on business development and commercialization in Lero, the world-leading Science Foundation Ireland Research Centre for Software and was formerly Technology Gateway Manager in Walton Institute, an ICT research center and prior to that held senior management and engineering roles in the technology and life sciences sectors. Denise has 20+ years of multi-disciplinary experience with a focus on innovation-driven technology and digital transformation initiatives both in industry and in academic research environments, operating at various levels from engineering to senior management.</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/LW.png" alt="A headshot of Dr Laura Whelan">
+            </div>
+            <br>
+            <h3>Laura Whelan</h3>
+            <p>Senior Postdoctoral <br>Scientist</p>
+            <p>Royal College of Surgeons Ireland</p>
+            <br>
+            <p style="font-size:small;">Laura works across all activities in the project as the project manager. </p>
+
+
+            <div class="bio-dropdown">
+                <p>Laura completed her doctoral research under the supervision of Professor G. Jane Farrar in the School of Genetics and Microbiology at Trinity College Dublin. Her research focused on determining the underlying genetic cause of inherited retinal disease in patients who had not yet received a genetic diagnosis. Following this, Laura spent time working at the cancer genetics service at St. James' Hospital and worked with the genetic counseling team as a genomic associate, where she gained valuable insights into clinical genetics. Laura is currently working as a Senior Postdoctoral Researcher on the Irish arm of the European Genomic Data Infrastructure Project in the FutureNeuro research center at the Royal College of Surgeons in Ireland under the supervision of Professor Gianpiero Cavalleri. Laura has a keen interest in digital health, public and patient involvement in research, and the integration of genomics into healthcare practice.</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/mansoor.png" alt="A headshot of Dr Mansoor Ahmed">
+            </div>
+            <br>
+            <h3>Mansoor Ahmed</h3>
+            <p>Research <br>Fellow</p>
+            <p>Maynooth University</p>
+            <br>
+            <p style="font-size:small;">Mansoor also works on activities related to data governance. </p>
+            <div class="bio-dropdown">
+                <p>Mansoor Ahmed did his M. Sc in Information Management from Vienna University of Technology (TU Wien), Austria. He was awarded Higher Education Commission (HEC) scholarship for higher studies (PhD) in Austria. In 2009, he completed his PhD degree from TU Wien, Austria.In 2010-2011 he was awarded Senior researcher fellowship scholarship by Indiana University, USA for his Postdoctoral studies. During this period, he worked in Web Science Lab (WSL).  In 2017, he worked as Senior researcher in University College Dublin (UCD).He is member of Editorial Review Board of many International Journals. He is also serving as Associate editor of IEEE Access. Besides this, he has organized number of workshops and also serves as Technical Program Committee member in International reputed conferences. He is also reviewer of good quality journals i.e., Elsevier and Springer. His research interest includes Data Provenance, Blockchain, Semantic Web technologies, Knowledge-based systems, Privacy issues in Health care data, Cloud Computing Security, Information Security and Privacy. He has over 12 years of teaching and research experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-member-wrapper col-lg-12">
+        <div class="team-member-wrapper col-lg-12">
+            <div class="text-center">
+                <h1>Public and patient steering board</h1>
+                <h4>Implementation of public and patient involvement (PPI) is currently underway across our 6 project activites. Additional members of the PPI steering board will be listed here soon. </h3>
+            </div>
+            <div class="padding-bottom: 20px;">
+            </div>
+        </div>
+    <div class="member-card">
+            <div class="member-image">
+                <img src="images/nuala.jpeg" alt="A headshot of Nuala Ryan">
+            </div>
+            <br>
+            <h3>Nuala Ryan</h3>
+            <p>Chair of Board and the mother of a child with NCBRS.</p>
+            <div class="bio-dropdown">
+            <p>Nuala is the Chair of Bord of the NCBRS Worldwide Foundation and the mother of a child with NCBRS, so has day to day experience of the challenges the syndrome can cause for children with NCBRS and hence the areas of neurological research that can help with this.
+                Nuala has 30 years drug development experience, both in pre-clinical and clinical development of compounds across numerous indications and therapeutic areas globally. She has a BSc in Pharmacology, a Diploma in International Business Management and training in Patient Advocacy and Engagement through IPPOSI in Ireland along with their Educational partners (UCD, Trinity College and the HPRA). Nuala is also experienced in the management of multiple EU funded Public Private Partnerships, involving co-ordinating activities of 40+ global academic, pharma, technology and Patient Organisation groups working together to solve key health related issues.
+                As well as being Chair of the Board of Trustees for the NCBRS Worldwide Foundation, Nuala serves on Steering Committees for multiple projects and Initiatives such as: Genomics Data infrastructure Ireland (GDI), Future Neuro RCSI Governance Committee, Member of the Health Product Regulatory Authority (HPRA) Patient panel, Member of the Pharmacy Taskforce Ireland, Former Board member of Genomics Medicines Ireland among others. Nuala has close working relationship with RCSI through membership of the FutureNeuro Public and Patient Involvement (PPI) panel and involvement in many other activities at RCSI, such as lecturing on PPI to students, work in the NeuroInsight Dragons Den. Nuala was also part of the committee that developed the Framework for Quality Improvement in Public and Patient Involvement (PPI) in health and social care research</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/MC.png" alt="Margaret and her family">
+            </div>
+            <br>
+            <h3>Margaret Cuddigan</h3>
+            <p>Patient Representative</p>
+            <div class="bio-dropdown">
+            <p>Margaret is a patient advocate for individuals with hereditary predisposition to cancer.</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-image">
+                <img src="images/danielgray.png" alt="A headshot of Daniel Gray">
+            </div>
+            <br>
+            <h3>Daniel Gray</h3>
+            <p>Medical Student</p>
+            <div class="bio-dropdown">
+            <p>Daniel is a science graduate and medical student, fascinated by the sheer volume of data generated through genomic sequencing and potential value of the use of this data in clinical research. I also have unique experience on the consumer side of genomic analyses and interpretation and would love to bridge the gap between consumers/patients and researchers in the field.</p>
+            </div>
+        </div>
+
+
+
+        </div>
+        <div class="team-member-wrapper col-lg-12">
+            <div class="team-member-wrapper col-lg-12">
+                <div class="text-center">
+                    <h1>Previous team members</h1>
+                </div>
+                <div class="padding-bottom: 20px;">
+                </div>
+            </div>
+        <div class="member-card">
+                <div class="member-image">
+                        <img src="images/SC.png" alt="A headshot of Dr Siobhan Cleary">
+                </div>
+                <br>
+                <h3>Siobhán Cleary</h3>
+                <p>Genomics Research Training Manager</p>
+                <p>University College Dublin</p>
+                <div class="bio-dropdown">
+                    <p>Siobhán earned a B.A (Mod) in Natural Science (Genetics) from Trinity College Dublin in 2011 and an MSc in Bioinformatics with Systems Biology from University College Cork in 2012. She then worked as a Marie Curie Early-Stage Researcher on the "Identification of IGF biomarkers in cancer," a collaborative project between UCC and Almac Diagnostics, Craigavon. In 2014, Siobhán joined the West Midlands Regional Genetics Laboratory (NHS) in Birmingham as a Bioinformatician and worked on developing a prenatal diagnostics service for single gene disorders within a clinical setting. In January 2017, Siobhán returned to work in Almac Diagnostics as an NGS Bioinformatician to help establish their Next Generation Sequencing (NGS) service. In September 2018, she returned to academia to complete her PhD in Bioinformatics at the University of Galway, under the supervision of Professor Cathal Seoighe, and her research focused on analyzing clonal mutations in cancer. In 2022, she took a 6-month break from her PhD to serve as the acting Training Lead for the SFI-funded Centre for Research Training in Genomics Data Science. Following her PhD in 2023, Siobhán worked as the Research Data Management Coordinator at ELIXIR Ireland before taking up the role of Genomics Research Training Manager at GDI Ireland.</p>
+                </div>
+            </div>
+    
+            </div>
+    
+
+
+    <div class="bio-modal">
+        <div class="bio-content"></div>
+        <span class="close-btn" onclick="closeBioModal()">X Close</span>
+    </div>
+    <section id="about"></section>
+    <section>
+
+    </section>
+    <section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <form action="#" method="post" class="contact-form">
+                            <div class="left-content">
+                                <h4>Questions? Get in touch!</h4>
+                                <h6>Please note that as this is a research project, we are not in a position to respond to medical queries. If you have questions related to medical issues, we advise consulting a qualified healthcare professional.</h6>
+                                <br>
+                                <a href="mailto:gdi-ireland@rcsi.ie">Click here to contact us.</a>
+                                <br>
+                                <br>
+                                <div class="social-icons">
+                                    <a href="https://www.linkedin.com/company/genomic-data-infrastructure-ireland/?originalSubdomain=ie" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://twitter.com/GDI_Ireland" target="_blank"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <form action="submit_form.php" method="post" class="contact-form">
+                            <div class="right-content">
+                                <h4>Research Funding</h4>
+                                <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GDI-IE-2022-1.</h6>
+                                <div class="footer-image-container">
+                                    <img src="images/eu-flag.png" alt="The european union flag" class="footer-image eu-flag">
+                                    <img src="images/HRB-logo.jpg" alt="The health research board logo" class="footer-image hrb-logo">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+                </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var memberCards = document.querySelectorAll('.member-card');
+
+    memberCards.forEach(function (card) {
+        var bioDropdown = card.querySelector('.bio-dropdown');
+        var bioContent = bioDropdown.innerHTML.trim();
+
+        var bioPopupTrigger = document.createElement('div');
+        bioPopupTrigger.className = 'bio-popup-trigger';
+        bioPopupTrigger.innerText = 'Biography';
+        bioPopupTrigger.dataset.bioContent = bioContent; // Store bio content in data attribute
+        card.appendChild(bioPopupTrigger);
+    });
+
+    var observer = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    memberCards.forEach(function (card) {
+        observer.observe(card);
+    });
+
+    // Add event listener to close bio modal when clicking outside of it
+    document.addEventListener('click', function(event) {
+        var bioModal = document.querySelector('.bio-modal');
+
+        // Check if the clicked element is not the bio modal
+        if (!bioModal.contains(event.target)) {
+            // If the clicked element is outside the bio modal, close the bio modal
+            closeBioModal();
+        }
+    });
+
+    // Add event listener to bio popup triggers
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('bio-popup-trigger')) {
+            var bioContent = event.target.dataset.bioContent; // Retrieve bio content from data attribute
+            openBioModal(bioContent);
+        }
+    });
+});
+
+function openBioModal(content) {
+    var modal = document.querySelector('.bio-modal');
+    var bioContent = modal.querySelector('.bio-content');
+    bioContent.innerHTML = content;
+    modal.style.display = 'block';
+}
+
+function closeBioModal() {
+    var modal = document.querySelector('.bio-modal');
+    modal.style.display = 'none';
+}
+
+</script>
+
+
+</body>
+</html>
