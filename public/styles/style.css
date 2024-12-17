@@ -20,8 +20,17 @@ h1, h2, h3, p {
     font-family: Arial, sans-serif; /* Override font family if needed */
 }
 
-h1, {
+h1 {
     text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    padding: 20px
 }
 
 /* Header styles */
@@ -712,8 +721,6 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -854,12 +861,15 @@ body {
 
  /* Your existing styles */
         .resource-card {
-            display: flex;
+            display: none; /*change if want to start with everything*/
             flex-direction: column;
-            margin: 10px;
-            padding: 10px;
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 30px;
+            border-color: #555 ;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /*need to check if this does anything*/
             overflow: hidden;
         }
 
@@ -889,13 +899,34 @@ body {
         }
 
         /* New styles for filter buttons */
+        .filters {
+          display: flex;             /* Activate Flexbox layout */
+          justify-content: center;   /* Horizontally center the buttons */
+          gap: 10px;                 /* Adds space between the buttons */
+          margin-top: 40px;
+          margin-bottom: 40px;       /* Optional: Add some space below the buttons */
+        }
+
         .filter-buttons {
             margin-bottom: 20px;
         }
 
         .filter-button {
-            margin-right: 10px;
+            flex-grow: 1; /*ensures that boxes are same length*/
+            margin-right: 20px;
+            text-align: center;
+            background-color: #7b1c58;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 20px;
             cursor: pointer;
+            display: inline-block;
+        }
+
+        .filter-button:hover {
+          background-color: #FFD895;
+          color: #7276B1;
         }
 
         body, html {

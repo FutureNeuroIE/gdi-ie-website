@@ -8,10 +8,57 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
-    <!-- Include jQuery -->
+    <!-- Include jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
 
+<header class="header">
+      <nav class="navbar">
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/about/index.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/team/index.html" class="nav-link">Team</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/collaborators/index.html" class="nav-link">Collaborators</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/news/index.html" class="nav-link">News</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/governance/index.html" class="nav-link">Governance</a>
+              </li>
+          </ul>
+      </nav>
+</header>
+
+  <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      }
+  </script>
+
+
+<body>
+  <section>
     <script>
+    <!-- Include jQuery -->
         // Filter based on audience tags
         function filterResources(audience) {
             if (audience === 'all') {
@@ -27,32 +74,59 @@
             // Add click event to filter buttons
             $('.filter-button').click(function () {
                 var audience = $(this).data('audience');
-                filterResources(audience);
+
+                // Remove the 'active' class from all filter buttons
+            $('.filter-button').removeClass('active');
+
+            // Add the 'active' class to the clicked button
+            $(this).addClass('active');
+
+            //call filterResources function to filter the cards
+            filterResources(audience);
             });
         });
     </script>
-</head>
+  </section>
 
-<body>
-<!-- Include jQuery -->
+  <section>
+    <h3 style="line-height: 1.5; padding-top: 20px;"> We have designed pages for different audiences, choose one to explore! </h3>
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button class="filter-button" data-audience="All">All</button>
+        <button class="filter-button" data-audience="General Public">Public</button>
+        <button class="filter-button" data-audience="Health Care Professionals">HCPs</button>
+        <button class="filter-button" data-audience="Researchers">Researchers</button>
+    </div></section>
 
-
-<header>
-    <div class="nbar">
-      <a href="../index.html"><i class="fa-solid fa-house"></i> <b>Home</b></a>
-          <a href="/about/index.html">About Us</a>
-          <a href="/team/index.html">The Team</a>
-          <a href="/collaborators/index.html">Collaborators</a>
-          <a href="/impact/index.html">Impact</a>
-          <a href="/news/index.html">News</a>
-          <a href="/governance/index.html">Governance</a>
+  <section>
+    <!-- Resource Cards -->
+    <div class="resource-card" data-audience="All">
+        <h3>All</h3>
+        <p>This resource is for everyone.</p>
     </div>
-  </header>
-        
+
+    <div class="resource-card" data-audience="General Public">
+        <h3>General Public</h3>
+        <p>This resource is for the general public.</p>
+    </div>
+
+    <div class="resource-card" data-audience="Health Care Professionals">
+        <h3>Health care professionals (HCPs)</h3>
+        <p>This resource is for health care professionals.</p>
+    </div>
+
+    <div class="resource-card" data-audience="Researchers">
+        <h3>Researchers</h3>
+        <p>This resource is for researchers.</p>
+    </div></section>
+
+
       <div class="coming-soon">
         <h2>Coming Soon!</h2>
         <p>We are working on something exciting. Stay tuned for updates!</p>
     </div>
+
+
 
     <footer class="footer">
         <div class="container">
