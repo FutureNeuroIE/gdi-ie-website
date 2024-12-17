@@ -296,7 +296,7 @@ h1, {
     height: 100%;
     max-width: 100%;
     padding: 30px;
-    
+
 }
 
 
@@ -308,7 +308,7 @@ h1, {
 .img-hrb {
     max-width: 100%;
     height: auto;
-    max-height: 180px; 
+    max-height: 180px;
 }
 
 .collab-statement {
@@ -902,19 +902,19 @@ body {
             margin: 0;
             padding: 0;
         }
-        
+
         .goal-body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         .goal-section {
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        
+
         .goal-card {
             margin: 10px 0;
             width: 100%;
@@ -929,20 +929,20 @@ body {
         .goal-card h2 {
             color: #7B1C58;
         }
-        
+
         .goal-card:hover {
             transform: scale(1.05);
         }
-        
+
         .goal-card h2 {
             font-size: 1.2em;
             margin-bottom: 10px;
         }
-        
+
         .goal-card p {
             color: #555;
         }
-        
+
         .about-us {
             margin-top: 20px;
             padding: 50px;
@@ -953,25 +953,25 @@ body {
         .explain-img {
             width: 500px; /* Set the default width */
         }
-        
+
         /* Hide the image on smaller screens */
         @media (max-width: 767px) {
             .explain-img {
-                
+
             }
         }
         .container {
             width: 80%;
             margin: 0 auto;
         }
-        
+
         /* Add media query for responsiveness */
         @media screen and (max-width: 768px) {
             .goal-card {
                 flex: 0 0 calc(50% - 20px);
             }
         }
-        
+
 
         .about-us-section {
             padding: 50px;
@@ -985,11 +985,11 @@ body {
             opacity: 0; /* Start with opacity 0 */
             transition: opacity 0.5s ease-in-out; /* Apply transition for smooth animation */
           }
-        
+
           .fade-in {
             opacity: 1; /* Make the element visible */
           }
-        
+
           /* Define keyframes for the animation */
           @keyframes fadeInLeft {
             from {
@@ -1001,42 +1001,42 @@ body {
               transform: translateX(0); /* Move to original position */
             }
           }
-        
+
         .columns {
             display: flex;
             flex-wrap: wrap;
         }
-        
+
         .column {
             flex: 1;
         }
-        
+
         h2 {
             font-size: 2rem; /* Larger font size */
             margin-bottom: 20px;
             text-align: center; /* Center align */
         }
-        
+
         ul {
             list-style-type: none;
             padding: 0;
         }
-        
+
         li {
             margin-bottom: 1rem;
             line-height: 1.6; /* Increased line height */
         }
-        
+
         strong {
             font-weight: bold;
         }
-        
+
         /* Fun animation for list items */
         li {
             animation: fadeInUp 0.5s ease forwards;
             opacity: 0;
         }
-        
+
         /* Additional styles for smaller screens */
         @media (max-width: 768px) {
             .column {
@@ -1044,8 +1044,8 @@ body {
                 margin-bottom: 20px; /* Add some space between stacked columns */
             }
         }
-        
-        
+
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1056,7 +1056,7 @@ body {
                 transform: translateY(0);
             }
         }
-        
+
         /* Additional styles for smaller screens */
         @media (max-width: 768px) {
             .column {
@@ -1174,7 +1174,7 @@ body {
 
     .about-us-section .column {
         flex: 0 0 100%; /* Full width for smaller screens */
-        
+
     }
 }
 
