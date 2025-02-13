@@ -43,13 +43,13 @@
             </ul>
         </nav>
     </header>
-    
+
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
-    
+
         hamburger.addEventListener("click", mobileMenu);
-    
+
         function mobileMenu() {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
@@ -59,6 +59,21 @@
     <section>
         <div class="container">
             <!-- News Card 1 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <a href="https://www.rcsi.com/dublin/news-and-events/news/news-article/2025/01/professor-cavalleri-co-leads-contribution-to-genome-project">
+                        <img src="images/doh_press_release.jpg" alt="Press release header from the Department of Health- reads "Minister for Health announces the establishment of a Genome of Ireland project to advance disease prediction and prevention".">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <p class="news-date">News | 30 January 2025</p>
+                    <p class="news-title">Genome of Ireland (GoI) project launches as part of the Genome of Europe initiative </p>
+                    <p class="news-description">
+                        The Genome of Ireland project has been launched as part of the GDI Ireland and Genome of Europe (GoE) initiatives. It is the largest all-island genetic sequencing effort till date.  This project will ensure that the genetic diversity of the Irish population is represented within the GoE. </p>
+                    <a href="https://www.linkedin.com/posts/roinnslainte_minister-for-health-jennifer-carroll-macneill-activity-7290410893174034433-tmUx?utm_source=share&utm_medium=member_desktop&rcm=ACoAACAQCaoBLM4Ajf7JvNef2-IJeVMRnGRUnuE" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
+                </div>
+            </div>
+
             <div class="news-card">
                 <div class="news-image">
                     <a href="https://www.linkedin.com/posts/genomic-data-infrastructure-ireland_yesterday-participants-representing-over-activity-7262077563668250624-yblu?utm_source=share&utm_medium=member_desktop">
@@ -117,7 +132,7 @@
                 </div>
             </div>
 
-    
+
             <!-- News Card 2 -->
             <div class="news-card">
                 <div class="news-image">
@@ -132,7 +147,7 @@
                     <a href="https://gdi.onemilliongenomes.eu/news/gdi-stakeholder-forum" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
                 </div>
             </div>
-    
+
             <!-- News Card 3 -->
             <div class="news-card">
                 <div class="news-image">
@@ -147,7 +162,7 @@
                     <a href="https://gdi.onemilliongenomes.eu/news/gdi-starter-kit" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
                 </div>
             </div>
-    
+
             <!-- News Card 4 -->
             <div class="news-card">
                 <div class="news-image">
@@ -162,15 +177,15 @@
                     <a href="https://gdi.onemilliongenomes.eu/news/gdi-project-launched" class="read-more">Read more <i class="icofont-arrow-right"></i></a>
                 </div>
             </div>
-    
+
             <!-- Repeat similar structure for other news cards -->
-    
+
         </div>
     </section>
-    
-    
-    
-    
+
+
+
+
 
     <section>
         <footer class="footer">
