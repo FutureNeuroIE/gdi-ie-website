@@ -1384,3 +1384,48 @@ textarea {
   ul {
     font-size: 20px; /* Change the font size to your desired value */
   }
+
+/* Genome of Ireland-specific CSS styles */
+.animatedImageContainerGoI {
+  height:30px;  /* Set the desired height */
+  width: 30px; /* Set the desired width */
+  overflow: hidden;
+  /*display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.animatedImageGoI {
+  width: 100%;  /* Makes the image fill the container */
+  height: auto; /* Maintains aspect ratio */
+  opacity: 0;
+}
+
+.about-section-goi {
+    padding: 50px;
+    background-color: #6AA14E; /*#6AA14E for RBG 106,161,78 OR  #42ABAE 66,171,174*/
+    color: white;
+}
+
+/*progress bar */
+.progress-container {
+    width: 70%;   /* most of page for width, but not full */
+    height: 40px;  /* Height of the bar */
+    background-color: #white; /* Background color */
+    border-radius: 20px;
+    border: 6px solid #000; /* Adds a black border */
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%; /* Start at 0% */
+    height: 100%;
+    background-color: #42ABAE; /* Green color */
+    animation: loading 3s linear forwards;
+}
+
+/* Animation */
+@keyframes loading {
+    from { width: 0%; background-color:#42ABAE; }
+    to { width: 10%; background-color:#42ABAE; }  /* stop the bar loading at this point */
+}
