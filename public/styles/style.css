@@ -1387,17 +1387,20 @@ textarea {
 
 /* Genome of Ireland-specific CSS styles */
 .animatedImageContainerGoI {
-  height:30px;  /* Set the desired height */
-  width: 30px; /* Set the desired width */
+  height:20px;  /* Set the desired height */
+  width: 20px; /* Set the desired width */
   overflow: hidden;
-  /*display: flex;
-  justify-content: center;
+  display: flex;
+  /*justify-content: center;
   align-items: center; */
 }
 
 .animatedImageGoI {
-  width: 100%;  /* Makes the image fill the container */
+  max-width: 100%;  /* Makes the image fill the container */
+  max-height: 100%;
+  width:auto;
   height: auto; /* Maintains aspect ratio */
+  object-fit: cover;
   opacity: 0;
 }
 
@@ -1420,7 +1423,7 @@ textarea {
 .progress-bar {
     width: 0%; /* Start at 0% */
     height: 100%;
-    background-color: #42ABAE; /* Green color */
+    background-color: #42ABAE; /* Green color from GoI logo */
     animation: loading 3s linear forwards;
 }
 
@@ -1428,4 +1431,9 @@ textarea {
 @keyframes loading {
     from { width: 0%; background-color:#42ABAE; }
     to { width: 10%; background-color:#42ABAE; }  /* stop the bar loading at this point */
+}
+
+.footer-goi {
+    padding: 50px;
+    background-color: #6AA14E;
 }
