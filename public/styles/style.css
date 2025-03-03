@@ -1387,10 +1387,12 @@ textarea {
 
 /* Genome of Ireland-specific CSS styles */
 .animatedImageContainerGoI {
-  height:20px;  /* Set the desired height */
-  width: 20px; /* Set the desired width */
+  height:100px;  /* Set the desired height */
+  width: 100px; /* Set the desired width */
+  max-width: 300px;
   overflow: hidden;
   display: flex;
+  padding: 5px;
   /*justify-content: center;
   align-items: center; */
 }
@@ -1400,7 +1402,7 @@ textarea {
   max-height: 100%;
   width:auto;
   height: auto; /* Maintains aspect ratio */
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0;
 }
 

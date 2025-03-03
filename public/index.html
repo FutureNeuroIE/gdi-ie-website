@@ -38,23 +38,26 @@
                 </li>
                 <li class="nav-item">
                     <a href="/governance/index.html" class="nav-link">Governance</a>
-                </li>                
+                </li>
+                <li class="nav-item">
+                    <a href="/genome of ireland/index.html" class="nav-link">Genome of Ireland</a>
+                </li>
             </ul>
         </nav>
     </header>
-    
+
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
-    
+
         hamburger.addEventListener("click", mobileMenu);
-    
+
         function mobileMenu() {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
         }
     </script>
-    
+
 <section class="home">
     <div class="logo-container">
       <div class="flex-container">
@@ -66,10 +69,10 @@
             <div id="animatedImageContainer">
                 <img id="animatedImage" src="images/gdi_ireland_logo.png" alt="A logo that reads Genomic Data Infrastructure Ireland. The image is a series of circles networked together in a sphere shape" style="max-width: 100%; height: auto;">
             </div>
-        
+
             <script>
                 var animatedImage = document.getElementById('animatedImage');
-                
+
                 function fadeInImage() {
                     var opacity = 0;
                     var intervalId = setInterval(function () {
@@ -80,7 +83,7 @@
                         }
                     }, 100);
                 }
-                
+
                 // Call the fadeInImage function to start the animation
                 fadeInImage();
             </script>
@@ -88,8 +91,8 @@
     </div>
 </div>
 </section>
-  
-  
+
+
 
 
 <section id="about">
@@ -100,7 +103,7 @@
         <h5> It has been widely recognised that a safe and secure infrastructure for genetic data is needed in Ireland to enable scientific research.
             <br><br>
 
-            The <a href="https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fipposi.ie%2F2022-citizens-jury-on-genomics%2F&data=05%7C02%7Claurawhelan%40rcsi.ie%7Cdbf6b099509f4a80e28908dc5e126735%7C607041e7a8124670bd3030f9db210f06%7C0%7C0%7C638488680350726945%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=HO3IS9Ra8xhN2ANdyUAPqNPZnmpfL48oZELWRAipveM%3D&reserved=0" style="color: #7276B1; font-weight: bold;">Irish Platform for Patient Organisations, Science and Industry (IPPOSI)</a>            published a report from their Citizen's Jury on the future use of genomics. 
+            The <a href="https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fipposi.ie%2F2022-citizens-jury-on-genomics%2F&data=05%7C02%7Claurawhelan%40rcsi.ie%7Cdbf6b099509f4a80e28908dc5e126735%7C607041e7a8124670bd3030f9db210f06%7C0%7C0%7C638488680350726945%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=HO3IS9Ra8xhN2ANdyUAPqNPZnmpfL48oZELWRAipveM%3D&reserved=0" style="color: #7276B1; font-weight: bold;">Irish Platform for Patient Organisations, Science and Industry (IPPOSI)</a>            published a report from their Citizen's Jury on the future use of genomics.
             <br><br>
             A recommendation listed in this report was to <b>"design a secure
             infrastructure to host genomic data so that data-sharing between health
@@ -134,11 +137,11 @@
         var aboutSection = document.getElementById("about");
         var vision = document.querySelector(".vision");
         var mission = document.querySelector(".mission");
-    
+
         window.addEventListener("scroll", function() {
             var scrollPosition = window.scrollY;
             var sectionPosition = aboutSection.offsetTop;
-    
+
             if (scrollPosition > sectionPosition - window.innerHeight / 2) {
                 aboutSection.classList.add("scrolled");
             } else {
@@ -206,7 +209,7 @@
             </div>
         </div>
     </footer>
-            
+
     <style>
         .form-row {
             display: flex;

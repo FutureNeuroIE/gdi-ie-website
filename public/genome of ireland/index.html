@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDI Ireland</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../images/gdi_ireland_logo.png">
+</head>
+
+<body>
+
+    <header class="header-goi">
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about/index.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/team/index.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/collaborators/index.html" class="nav-link">Collaborators</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/news/index.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/governance/index.html" class="nav-link">Governance</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+
+<section class="home">
+    <div class="logo-container">
+      <div class="flex-container">
+        <div class="flex-item">
+          <h1 class="info"><b> Welcome to the home page of the Genome of Ireland (GoI) Project! </b></h1>
+           </div>
+
+        <div class="flex-item align-items-center justify-content-center">
+            <div id="animatedImageContainerGoI">
+                <img id="animatedImageGoI" src="../images/goi_svg.svg" alt="A logo that reads Genome of Ireland. The image is a sphere half made up of a DNA double helix which runs across the entire island of Ireland">
+            </div>
+          </div>
+
+            <script>
+                var animatedImage = document.getElementById('animatedImageGoI');
+
+                function fadeInImage() {
+                    var opacity = 0;
+                    var intervalId = setInterval(function () {
+                        opacity += 0.08;
+                        animatedImage.style.opacity = opacity;
+                        if (opacity >= 1) {
+                            clearInterval(intervalId);
+                        }
+                    }, 100);
+                }
+
+                // Call the fadeInImage function to start the animation
+                fadeInImage();
+            </script>
+
+        <div>
+          <h3 class="info"> We aim to create a dataset of DNA that represents the general Irish adult population. The same initiative is being carried out in other European countries. Together, these national projects will form what will be known as the Genome of Europe (GoE). The GoI is also providing Irish data to be hosted by GDI Ireland in the long-term </h3>
+              <h4 class="info"> This project <a href="https://www.gov.ie/en/press-release/dbfe4-minister-for-health-announces-the-establishment-of-a-genome-of-ireland-project-to-advance-disease-prediction-and-prevention/" target="_blank" <i> launched officially</i></a> on 29th January 2025. Updates will be provided on this page </h4>
+
+                <div class="flex-item align-items-center justify-content-center">
+                    <div class="progress-container">
+                      <div class="progress-bar"></div>
+             </div>
+           </div>
+        </div> <br><br>
+</section>
+
+<section id="about">
+    <div class="about-section-goi">
+        <h2><b>How will Genome of Ireland data be used?</b></h2>
+        <br>
+
+        <h3 class="text-center"><b> GoI aims to establish a reference whole genome sequence (WGS) dataset of at least <i>1,200</i> adults living in Ireland</b></h3><br>
+          <h4 class="text-center"><b> Here are three examples of how this data can be used. Click each image for more information. </b></h4><br>
+          <br>
+
+        <div class="container-use-case">
+          <div class="column-use-case">
+          <h5> Variant Lookup </h5><br>
+          <div class="video-container" onclick="loadVideo()">
+              <img id="video-thumbnail" src="images/vlookup_draft.svg" alt="Watch video explaining variant lookup">
+          </div>
+        </div>
+
+          <div class="column-use-case">
+          <h5> Controls for research studies </h5><br>
+            <img src="images/control_draft.svg" alt="Image depicting controls for research studies lookup">
+          </div>
+
+          <div class="column-use-case">
+          <h5> Genetic references for Irish population structure </h5><br>
+            <img src="images/demographics_draft.svg" alt="Image depicting genetic references for the population structure of Ireland ">
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+
+</section>
+
+
+<section class="collaborators-section">
+    <div class="container">
+        <img src="../images/collabs.png" class="img-fluid" alt="This image displays 8 logos in the following order: The royal college of surgeons in Ireland, university college dublin, university of limerick. maynooth university, health research charities ireland, the irish platform for patient organisations science and industry, FutureNeuro and the health research board">
+    </div>
+        <div class="collab-statement">
+            <a href="../collaborators/index.html" >Click here to see our collaborators page for more details. </a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <footer class="footer-goi">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form action="#" method="post" class="contact-form">
+                        <div class="left-content">
+                            <h4>Questions? Get in touch!</h4>
+                            <h6>Please note that as this is a research project, we are not in a position to respond to medical queries. If you have questions related to medical issues, we advise consulting a qualified healthcare professional.</h6>
+                            <br>
+                            <a href="mailto:genomeofireland@rcsi.ie">Click here to contact us.</a>
+                            <br>
+                            <br>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/company/genomic-data-infrastructure-ireland/?originalSubdomain=ie" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com/GDI_Ireland" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form action="submit_form.php" method="post" class="contact-form">
+                        <div class="right-content">
+                            <h4>Research Funding</h4>
+                            <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GDI-IE-2022-1.</h6>
+                            <div class="footer-image-container">
+                                <img src="../images/eu-flag.png" alt="The european union flag" class="footer-image eu-flag">
+                                <img src="../images/HRB-logo.jpg" alt="The health research board" class="footer-image hrb-logo">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            flex: 1 0 100%;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+    </section>
+</div>
+</body>
+</html>
