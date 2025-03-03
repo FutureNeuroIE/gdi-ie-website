@@ -1406,7 +1406,7 @@ textarea {
 
 .about-section-goi {
     padding: 50px;
-    background-color: #6AA14E; /*#6AA14E for RBG 106,161,78 OR  #42ABAE 66,171,174*/
+    background-color: #3C8418; /*#6AA14E for RBG 106,161,78 OR  #42ABAE 66,171,174*/
     color: white;
 }
 
@@ -1434,11 +1434,35 @@ textarea {
 }
 
 .header-goi {
-    border-bottom: 1px solid #6AA14E;
-    background-color: #6AA14E;
+    border-bottom: 1px solid #3C8418;
+    background-color: #3C8418;
 }
 
 .footer-goi {
     padding: 50px;
-    background-color: #6AA14E;
+    background-color: #3C8418;
 }
+
+.container-use-case {
+    display: flex;
+    justify-content: space-around; /* Evenly distribute columns */
+    gap: 20px; /* Space between columns */
+    text-align: center; /* Center text in each column */
+    max-width: 900px; /* Adjust as needed */
+    margin: auto; /* Center container */
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+  }
+
+.column-use-case {
+            flex: 1;
+            min-width: 250px;
+            padding: 8px;
+        }
+        .full-width {
+            flex-basis: 100%;
+        }
