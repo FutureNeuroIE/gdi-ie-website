@@ -1433,6 +1433,11 @@ textarea {
     to { width: 10%; background-color:#42ABAE; }  /* stop the bar loading at this point */
 }
 
+.header-goi {
+    border-bottom: 1px solid #6AA14E;
+    background-color: #6AA14E;
+}
+
 .footer-goi {
     padding: 50px;
     background-color: #6AA14E;
