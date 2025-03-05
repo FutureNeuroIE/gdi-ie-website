@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
-  <script src="../script.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
     <link rel="icon" type="image/png" href="../images/gdi_ireland_logo.png">
 </head>
 
@@ -24,21 +24,6 @@
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="../index.html" class="nav-link">Back to GDI Ireland</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about/index.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/team/index.html" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/collaborators/index.html" class="nav-link">Collaborators</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/news/index.html" class="nav-link">News</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/governance/index.html" class="nav-link">Governance</a>
                 </li>
                 <li class="nav-item">
                     <a href="/genome of ireland/index.html" class="nav-link">Genome of Ireland</a>
@@ -59,7 +44,27 @@
         }
     </script>
 
-<section class="home">
+    <!--In-page menu-->
+    <!-- 🔹 Hamburger Menu Button -->
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+        <!-- 🔹 Hidden Sidebar Menu -->
+        <nav class="side-menu" id="sideMenu">
+            <ul>
+                <li><a href="#top">Genome of Ireland</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#collaborators">Collaborators</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="../index.html">Back to GDI Ireland</a></li>
+            </ul>
+        </nav>
+
+
+<!--Mainu-->
+<section id="top" class="home">
     <div class="logo-container">
       <div class="flex-container">
         <div class="flex-item">
@@ -135,31 +140,74 @@
 </section>
 
 <!-- /*team*/-->
-<section>
+<section id="team">
         <div class="team-member-wrapper col-lg-12">
             <div class="text-center">
-                <h1>Team</h1>
+                <h1>Core Management Team</h1><br>
+                  <h3>The GoI project is run by a team of scientists, legal experts and public representatives </h3>
             </div>
 
           <!-- team member 1-->
            <div class="member-card">
             <div class="member-image">
-                <img src="images/GC.png" alt="A headshot of Prof Gianpiero Cavalleri">
+                <img src="../team/images/GC.png" alt="A headshot of Prof Gianpiero Cavalleri">
             </div>
             <h3>Gianpiero Cavalleri</h3>
             <p>Professor of Human Genetics</p>
             <p>Royal College of Surgeons <br>Ireland</p><br>
-            <p style="font-size:small;"> Gianpiero is co-lead of GDI Ireland and is coordinating activities focused on long-term sustainability and a designing public genome sequencing project. </p>
-
+            <p style="font-size:small;"> Gianpiero is a co-lead of the GoI project and coordinates the project </p>
             <div class="bio-dropdown">
                 <p>Gianpiero Cavalleri is Professor of Human Genetics, Deputy Director of the SFI FutureNeuro Research Centre and Director of the Human Genetic Variation Research Group at RCSI. Prof. Cavalleri is also Deputy Director (Translational Research) of the RCSI Office of Research and Innovation. Gianpiero was awarded a Ph.D. in human genetics at University College London in 2006. Prior to his arrival at RCSI, he worked at the Institute for Genome Science and Policy at Duke University, North Carolina. He was appointed to faculty at RCSI in 2008. Prof. Cavalleri has published over 160 articles in leading peer reviewed international journals including Nature, Nature Genetics, PNAS and the New England Journal of Medicine. AHis research group works at the interface of computational biology, clinical diagnostics and population genetics.</p>
             </div>
         </div> <!--close member card-->
-      </div> <!--close team-member wrapper-->
+
+        <!-- team member 2-->
+         <div class="member-card">
+          <div class="member-image">
+              <img src="../team/images/RMcL.webp" alt="A headshot of Dr. McLaughlin">
+          </div>
+          <h3>Russell McLaughlin</h3>
+          <p>Assistant Professor of Human Genetics</p>
+          <p>Trinity College <br>Dublin</p><br>
+          <p style="font-size:small;"> Russell is a co-lead of the GoI project and works on technical aspects of the project  </p>
+          <div class="bio-dropdown">
+              <p>TBC</p>
+          </div>
+      </div> <!--close member card-->
+
+      <!-- team member 3-->
+         <div class="member-card">
+          <div class="member-image">
+              <img src="../team/images/LW.png" alt="A headshot of Dr. Whelan">
+          </div>
+          <h3>Laura Whelan</h3>
+          <p>Lecturer in Human Genetics</p>
+          <p>Royal College of Surgeons <br>Ireland</p><br>
+          <p style="font-size:small;">TBD  </p>
+          <div class="bio-dropdown">
+              <p>TBC</p>
+          </div>
+        </div> <!--close member card-->
+
+        <!-- team member 4-->
+           <div class="member-card">
+            <div class="member-image">
+                <img src="../team/images/IF.png" alt="A headshot of Dr. Fashina">
+            </div>
+            <h3>Ifeolutembi Fashina </h3>
+            <p>Post-doctoral Researcher</p>
+            <p>Royal College of Surgeons <br>Ireland</p><br>
+            <p style="font-size:small;">TBD  </p>
+            <div class="bio-dropdown">
+                <p>TBC</p>
+            </div>
+          </div> <!--close member card-->
+
+  </div> <!--close team-member wrapper-->
 </section>
 
 <!-- /*collaborators*/-->
-<section class="collaborators-section">
+<section id="collaborators" class="collaborators-section">
     <div class="container">
         <img src="../images/collabs.png" class="img-fluid" alt="This image displays 8 logos in the following order: The royal college of surgeons in Ireland, university college dublin, university of limerick. maynooth university, health research charities ireland, the irish platform for patient organisations science and industry, FutureNeuro and the health research board">
     </div>
