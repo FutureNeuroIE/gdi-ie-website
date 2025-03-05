@@ -1565,5 +1565,32 @@ textarea {
 
 /* 🔹 Section Styling */
 section {
-    padding: 100px 20px;
+    padding: 20px 20px;
+}
+
+/* 🔹 Team member GoI */
+/* Ensures team members appear in a new row */
+.team-members-container-goi {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: center; /* Centers members */
+    gap: 20px; /* Space between members */
+    margin: auto;
+}
+
+.team-member-wrapper-goi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #white;
+    padding: 20px;
+    margin-top: 0; /* Prevents extra space from previous sections */
+    gap:0;
+}
+
+.team-member-wrapper-goi h1,
+.team-member-wrapper-goi h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Controls spacing */
 }
