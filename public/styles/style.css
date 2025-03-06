@@ -1389,7 +1389,7 @@ textarea {
 .animatedImageContainerGoI {
   height:30px;  /* Set the desired height */
   width: 30px; /* Set the desired width */
-  max-width: 100px;
+  max-width: 30px;
   overflow: hidden;
   display: flex;
   padding: 5px;
@@ -1605,9 +1605,12 @@ section {
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s;
 }
 
-/* When visible */
-/*.visible {
-    max-height: 500px; /* Adjust as needed */
-  /*  opacity: 1;
-    visibility: visible;
-} */
+.info-goi{
+    text-align: center;
+    font-size: xx-large;
+    padding: 15px;
+    color: #4a4a4a;
+    opacity: 1;
+    background-color: none;
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+}
