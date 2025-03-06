@@ -53,12 +53,14 @@
         <!-- 🔹 Hidden Sidebar Menu -->
         <nav class="side-menu" id="sideMenu">
             <ul>
-                <li><a href="#top">Genome of Ireland</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#collaborators">Collaborators</a></li>
+                <li><a href="#governance">Governance</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="../index.html">Back to GDI Ireland</a></li>
+                <li><a href="../news/index.html" target="_blank" class="nav-link"><b>News<b></a></li>
+                <li><a href="../index.html" class="nav-link"><b>Back to GDI Ireland<b></a></li>
             </ul>
         </nav>
 
@@ -199,7 +201,7 @@
                 <img src="../team/images/IF.png" alt="A headshot of Dr. Fashina">
             </div>
             <h3>Ifeolutembi Fashina </h3>
-            <p>Post-doctoral Researcher</p>
+            <p>Post-doctoral Scientist</p>
             <p>Royal College of Surgeons <br>Ireland</p><br>
             <p style="font-size:small;">TBD  </p>
             <div class="bio-dropdown">
@@ -306,26 +308,153 @@
                       </div><br> <!--close member card-->
 
             <!-- Add new members here-->
-
-            <div class="text-center">
-                <h1>Previous Team Members</h1>
-                  <!--DM-->
-            </div>
-
   </div> <!--close team-member wrapper-->
+</div><br>
+
+<div class="team-member-wrapper-goi col-lg-12">
+    <div class="text-center">
+          <h1>Previous Team Members</h1>
+            <!--DM-->
+      </div>
+
+  <!-- Ensures team members start on a new row -->
+      <div class="team-members-container-goi">
+
+      </div>
+          <div class="padding-bottom: 20px;">
+          </div>
+
+        <!-- team member 1-->
+         <div class="member-card">
+          <div class="member-image">
+              <img src="../team/images/DMitch.jpeg" alt="A headshot of Dr. Mitchell">
+          </div>
+          <h3>Derick Mitchell </h3>
+          <p>Former IPPOSI Representative</p>
+          <p>IPPOSI <br>Ireland</p><br>
+          <p style="font-size:small;"> TBC</p>
+          <div class="bio-dropdown">
+              <p>TBC</p>
+          </div>
+      </div> <!--close member card-->
+
+    </div> <!--close team members container-->
 </div>
+
 </section>
 
 <!-- /*collaborators*/-->
 <section id="collaborators" class="collaborators-section">
     <div class="container">
-        <img src="../images/collabs.png" class="img-fluid" alt="This image displays 8 logos in the following order: The royal college of surgeons in Ireland, university college dublin, university of limerick. maynooth university, health research charities ireland, the irish platform for patient organisations science and industry, FutureNeuro and the health research board">
+        <img src="images/collabs.png" class="img-fluid" alt="This image displays 12 logos in the following order: The royal college of surgeons in Ireland, university college dublin, university of limerick. maynooth university, health research charities ireland, the irish platform for patient organisations science and industry, FutureNeuro and the health research board">
     </div>
         <div class="collab-statement">
-            <a href="../collaborators/index.html" >Click here to see our collaborators page for more details. </a>
+            <a href="#" id="toggleCollaborators">Click here to see more details about our collaborators </a>
         </div>
     </div>
 </section>
+
+<section id="european-collaborators" class="collaborators-section text-center" class="hidden">
+    <div class="container">
+      <h2 class="mb-5">European Collaborators</h2>
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="collaborator-card flex-grow-1">
+            <div class="collaborator-image">
+                <a href="https://gdi.onemilliongenomes.eu/" target="_blank">
+                    <img src="../collaborators/images/gdi_eu_logo.png" alt="the logo for the European Genomic Data Infrastructure Project. It is a collection of interconnected circles that form a sphere, representing countries connected.">
+                </a>
+            </div>
+            <h3 class="collaborator-name">European Genomic Data Infrastructure Project</h3>
+            <p class="collaborator-description">The European level GDI project consisting of 24 member states. Our European colleagues work with us to implement the proof of concept infrastructure.</p>
+        </div>
+                            </div>
+        <div class="col-md-6 d-flex">
+          <div class="collaborator-card flex-grow-1">
+            <div class="collaborator-image">
+              <a href="https://elixir-europe.org/" target="_blank">
+              <img src="../collaborators/images/elixir-logo.png" alt="The Elixir Europe logo. It is elixir in grey text, but the X is a DNA double helix in orange.">
+            </a>
+            </div>
+            <h3 class="collaborator-name">Elixir Europe</h3>
+            <p class="collaborator-description">Enables researchers to access and analyse life science data, to improve the value and impact of life science research on public health, the environment and the economy.</p>
+          </div>
+        </div>
+        <!-- Add more European collaborator cards here -->
+      </div>
+    </div>
+  </section>
+
+  <section id="national-collaborators" class="collaborators-section text-center" class="hidden">
+    <div class="container">
+      <h2 class="mb-5">National Collaborators</h2>
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="collaborator-card flex-grow-1">
+            <div class="collaborator-image">
+              <a href="https://www.hrb.ie/" target="_blank">
+              <img src="../images/HRB-logo.jpg" alt="The Health Research Board logo. It is a dark blue color and reads HRB health research board">
+              </a>
+            </div>
+            <h3 class="collaborator-name">The Health Research Board</h3>
+            <p class="collaborator-description">The Health Research Board (HRB) is a State Agency under the Department of Health. We support and fund health and social care research and provide evidence to inform policy and practice.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="collaborator-card flex-grow-1">
+            <div class="collaborator-image">
+              <a href="https://www.futureneurocentre.ie/" target="_blank">
+              <img src="../images/FN-logo.png" alt="FutureNeuro Research Centre logo. Curved lines mimicing a brain with the text futureneuro and an arrow through the centre from left to right">
+              </a>
+            </div>
+            <h3 class="collaborator-name">FutureNeuro Research Centre</h3>
+            <p class="collaborator-description">A multi-disciplinary, inter-institutional research centre that aims to change the patient journey through research informed by the needs of both patients and neurologists.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="collaborator-card flex-grow-1">
+          <div class="collaborator-image">
+            <a href="https://hrci.ie/" target="_blank">
+            <img src="../images/hrci-logo.png" alt="Health Research Charities Ireland logo. It reads HRCI in green text with lines connecting each letter. Then the text Health Research Charities Ireland">
+            <a>
+          </div>
+          <h3 class="collaborator-name">Health Research Charities Ireland</h3>
+          <p class="collaborator-description">Health Research Charities Ireland (HRCI) is the national umbrella organisation of charities engaged in health, medical and social care research, collectively representing over 2 million people in Ireland.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="collaborator-card flex-grow-1">
+          <div class="collaborator-image">
+            <a href="https://ipposi.ie/" target="_blank">
+            <img src="../images/ipposi-logo.svg" alt="The Irish Platform for Patient Organisations, Science and Industry logo. It reads IPPOSI in blue capitals">
+          </a>
+          </div>
+          <h3 class="collaborator-name">The Irish Platform for Patient Organisations, Science and Industry</h3>
+          <p class="collaborator-description">Inspires and promotes patient involvement in the treatment and decision-making processes that affect healthcare in Ireland.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="collaborator-card flex-grow-1">
+          <div class="collaborator-image">
+            <a href="https://www.hse.ie/eng/about/who/national-genetics-and-genomics" target="_blank">
+            <img src="../collaborators/images/hse-logo.jpg" alt="The health service executive logo. Flowing letters HSE in green text">
+            </a>
+          </div>
+          <h3 class="collaborator-name">The National Genetics and Genomics Office</h3>
+          <p class="collaborator-description">The NGGO is responsible for coordinating a national approach to genetics and genomics, supporting the development of a skilled genetic and genomic workforce, enhancing clinical services for patients and families, and strengthening laboratory and data infrastructure to drive advances in genetic and genomic medicine services.</p>
+        </div>
+      </div>
+      <!-- Add more National collaborator cards here -->
+    </div>
+  </div>
+</section>              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<!-- Add more collaborator cards as needed -->
+
+</div>
 
 <!-- /*Footer*/-->
 <section>
@@ -352,7 +481,7 @@
                     <form action="submit_form.php" method="post" class="contact-form">
                         <div class="right-content">
                             <h4>Research Funding</h4>
-                            <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GDI-IE-2022-1.</h6>
+                            <h6>The GDI Ireland project receives funding from the European Union's Digital Europe Programme under grant agreement number 101081813 and the Irish Health Research Board under grant agreement GOI-2024-001.</h6>
                             <div class="footer-image-container">
                                 <img src="../images/eu-flag.png" alt="The european union flag" class="footer-image eu-flag">
                                 <img src="../images/HRB-logo.jpg" alt="The health research board" class="footer-image hrb-logo">

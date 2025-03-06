@@ -94,6 +94,7 @@ function openBioModal(content) {
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const sideMenu = document.getElementById("sideMenu");
+    let lastScrollTop = 0;
 
     // Toggle menu on click
     menuToggle.addEventListener("click", function () {
@@ -123,4 +124,71 @@ document.addEventListener("DOMContentLoaded", function () {
             sideMenu.classList.remove("active"); // Close menu after selection
         });
     });
+
+    // Hide menu button on scroll down, show on scroll up
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down - hide button
+            menuToggle.style.top = "-100px"; // Move it out of view
+        } else {
+            // Scrolling up - show button
+            menuToggle.style.top = "20px"; // Restore original position
+        }
+
+        lastScrollTop = scrollTop;
+    });
+});
+
+// Hide detailed collaborators until link is clicked
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleLink = document.getElementById("toggleCollaborators");
+    const europeanCollaborators = document.getElementById("european-collaborators");
+    const nationalCollaborators = document.getElementById("national-collaborators");
+
+    // Find the last "collaborator-description" inside National Collaborators
+    const descriptions = nationalCollaborators.querySelectorAll(".collaborator-description");
+    const nationalLastElement = descriptions.length > 0 ? descriptions[descriptions.length - 1] : null;
+
+    if (!nationalLastElement) {
+        console.warn("No .collaborator-description found in #national-collaborators.");
+        return; // Prevent errors if no matching elements exist
+    }
+
+    // Function to toggle visibility
+    function toggleSection(section) {
+        if (section.classList.contains("visible")) {
+            section.classList.remove("visible");
+            section.classList.add("hidden");
+        } else {
+            section.classList.remove("hidden");
+            section.classList.add("visible");
+        }
+    }
+
+    // Click event to show/hide both sections
+    toggleLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        toggleSection(europeanCollaborators);
+        toggleSection(nationalCollaborators);
+    });
+
+    // Intersection Observer to detect when the LAST collaborator description is fully out of view
+    const observer = new IntersectionObserver(
+        (entries) => {
+            // Only hide if the last .collaborator-description is out of view
+            if (!entries[0].isIntersecting) {
+                // Hide both sections when the last collaborator description is fully out of view
+                europeanCollaborators.classList.remove("visible");
+                europeanCollaborators.classList.add("hidden");
+                nationalCollaborators.classList.remove("visible");
+                nationalCollaborators.classList.add("hidden");
+            }
+        },
+        { threshold: 0 } // Fires when even the smallest part of the element leaves the viewport
+    );
+
+    observer.observe(nationalLastElement); // Watch the last collaborator description
+
 });
