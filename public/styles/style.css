@@ -1443,6 +1443,10 @@ textarea {
 .header-goi {
     border-bottom: 1px solid #3C8418;
     background-color: #3C8418;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footer-goi {
@@ -1613,4 +1617,86 @@ section {
     opacity: 1;
     background-color: none;
     animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+}
+
+/*lock GoI logo to the top left*/
+.logo-container-goi {
+    flex:1;
+}
+
+.logo-goi {
+    border-radius: 10px;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    /*position: relative;*/
+    background: transparent;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: width 0.3s ease;
+    /*width: 10px; /* Initial width for the magnifying icon */*/
+}
+
+/* Magnifying Glass Icon */
+.search-icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Hidden Search Input */
+.search-input {
+    border: none;
+    background: transparent;
+    color:#555;
+    padding: 8px 12px;
+    outline: none;
+    width: 0;
+    font-size: 20px;
+    transition: width 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Expanded State for Search */
+.search-container.active {
+    width: 250px; /* Expands container when active */
+}
+
+.search-container.active .search-input {
+    width: 150px; /* Show search input when container is expanded */
+    opacity: 1;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between search and hamburger */
+}
+/* Responsive Design */
+/*@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 200px;
+        margin-top: 10px;
+    }
 }

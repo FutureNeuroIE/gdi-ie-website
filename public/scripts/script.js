@@ -192,3 +192,9 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(nationalLastElement); // Watch the last collaborator description
 
 });
+
+//toogle search
+function toggleSearch() {
+    const searchContainer = document.querySelector(".search-container");
+    searchContainer.classList.toggle("active");
+}

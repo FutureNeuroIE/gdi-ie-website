@@ -10,45 +10,39 @@
   <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
   <script src="../scripts/script.js" defer></script>
     <link rel="icon" type="image/png" href="../images/gdi_ireland_logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="header-goi">
         <nav class="navbar">
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+          <!--place logo at top left-->
+          <div class="logo-container-goi">
+           <a href="https://genomicdata.ie/genomeofireland" class="logo-goi">
+             <img src="./images/goi_draft_trans_small.svg" alt="Genome of Ireland Logo" />
+           </a>
+         </div>
+
+<!-- 🔹 Right-aligned container for search & menu -->
+    <div class="nav-right">
+         <!-- Magnifying Glass Icon -->
+          <div class="search-container">
+              <!--<button class="search-icon" onclick="toggleSearch()">-->
+              <button class="fa fa-search" style="font-size:24px;background:transparent" onclick="toggleSearch()"> </button>
+              <!-- Hidden Search Input -->
+              <input type="text" class="search-input" placeholder="Search..." id="searchInput">
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Back to GDI Ireland</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/genome of ireland/index.html" class="nav-link">Genome of Ireland</a>
-                </li>
-            </ul>
+
+      <!--In-page menu-->
+      <!-- 🔹 Hamburger Menu Button -->
+          <div class="menu-toggle" id="menuToggle">
+              ☰
+          </div>
+        </div>
+
         </nav>
     </header>
-
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-
-        hamburger.addEventListener("click", mobileMenu);
-
-        function mobileMenu() {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        }
-    </script>
-
-    <!--In-page menu-->
-    <!-- 🔹 Hamburger Menu Button -->
-        <div class="menu-toggle" id="menuToggle">
-            ☰
-        </div>
 
         <!-- 🔹 Hidden Sidebar Menu -->
         <nav class="side-menu" id="sideMenu">
