@@ -1663,7 +1663,7 @@ section {
 .search-input {
     border: none;
     background: transparent;
-    color:#555;
+    color:#000000;
     padding: 8px 12px;
     outline: none;
     width: 0;
@@ -1691,6 +1691,14 @@ section {
 .search-input:focus {
     outline: none;
 }
+
+/* Highlight search results */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 5px;
+}
+
 
 .nav-right {
     display: flex;

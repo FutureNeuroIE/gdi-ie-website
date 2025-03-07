@@ -195,6 +195,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //toogle search
 function toggleSearch() {
-    const searchContainer = document.querySelector(".search-container");
-    searchContainer.classList.toggle("active");
+    document.querySelector(".search-container").classList.toggle("active");
+    document.getElementById("searchInput").focus();
+}
+
+// Function to search the page and highlight matches
+function searchPage() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    // Remove previous highlights
+    removeHighlights();
+
+    if (input.length < 3) return; // Don't search if input is too short
+
+    highlightMatches(document.body, input);
+
+    // Scroll to first match (optional)
+    let firstMatch = document.querySelector(".highlight");
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+}
+
+// Function to highlight matches without breaking input fields
+function highlightMatches(element, searchText) {
+    if (element.nodeType === Node.TEXT_NODE) {
+        let text = element.nodeValue;
+        let parent = element.parentNode;
+
+        let regex = new RegExp(`(${searchText})`, "gi");
+        if (regex.test(text)) {
+            let newHTML = text.replace(regex, `<mark class="highlight">$1</mark>`);
+            let tempDiv = document.createElement("div");
+            tempDiv.innerHTML = newHTML;
+
+            while (tempDiv.firstChild) {
+                parent.insertBefore(tempDiv.firstChild, element);
+            }
+            parent.removeChild(element);
+        }
+    } else if (element.nodeType === Node.ELEMENT_NODE && element.tagName !== "SCRIPT" && element.tagName !== "INPUT" && element.tagName !== "TEXTAREA") {
+        Array.from(element.childNodes).forEach(child => highlightMatches(child, searchText));
+    }
+}
+
+// Function to remove highlights safely
+function removeHighlights() {
+    document.querySelectorAll("mark.highlight").forEach(mark => {
+        mark.replaceWith(document.createTextNode(mark.textContent));
+    });
 }
