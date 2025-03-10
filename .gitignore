@@ -7,5 +7,5 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-.json
+#.json
 .firebaserc

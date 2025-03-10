@@ -245,3 +245,18 @@ function removeHighlights() {
         mark.replaceWith(document.createTextNode(mark.textContent));
     });
 }
+
+//make GoI navbar disappear when we scrollY
+let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar-goi");
+    let currentScroll = window.scrollY;
+
+    if (currentScroll === 0) {
+       // At the very top -> Show navbar
+       navbar.classList.remove("hidden");
+   } else {
+       // Hide navbar when scrolling down
+       navbar.classList.add("hidden");
+   }
+});

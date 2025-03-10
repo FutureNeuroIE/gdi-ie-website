@@ -16,7 +16,7 @@ body {
 
 
 /* Common styles for headings and paragraphs */
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     font-family: Arial, sans-serif; /* Override font family if needed */
 }
 
@@ -408,6 +408,7 @@ button:hover {
 .member-card p {
     font-size: small;
     margin: 5px 0; /* Add margin to top and bottom to separate paragraphs */
+    font-family: Arial, sans-serif !important; /* Forces the body font */
 }
 
 .member-card h3 {
@@ -716,7 +717,7 @@ tr:nth-child(even) {
 }
 
 /* Reset some default margin and padding */
-body, h1, h2, h3, p, ul, li {
+body, h1, h2, h3, h4, p, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -727,8 +728,8 @@ body {
 }
 
 /* Apply a common font-family to specified elements */
-body, h1, h2, h3, p, ul, li {
-    font-family:  font-family: Arial, sans-serif;
+body, h1, h2, h3, h4, p, ul, li {
+    font-family: Arial, sans-serif;
 }
 
 
@@ -1413,6 +1414,14 @@ textarea {
 }
 
 /*progress bar */
+.progress-wrapper {
+  display: flex;
+  align-items: center; /* Align items vertically to the center */
+  justify-content: space-around; /* Add space between the elements */
+  padding:20px;
+  margin: 0 3px; /* Reduced horizontal space around the progress bar */
+}
+
 .progress-container {
     width: 70%;   /* most of page for width, but not full */
     height: 40px;  /* Height of the bar */
@@ -1429,10 +1438,6 @@ textarea {
     animation: loading 3s linear forwards;
 }
 
-.progress-number {
-    font-size: 24px;
-    font-weight: bold;
-}
 
 /* Animation */
 @keyframes loading {
@@ -1601,11 +1606,11 @@ section {
     gap:0;
 }
 
-.team-member-wrapper-goi h1,
+/*.team-member-wrapper-goi h1,
 .team-member-wrapper-goi h3 {
     margin-top: 0;
     margin-bottom: 10px; /* Controls spacing */
-}
+/*}*/
 
 /*hidden properties for collaborators*/
 /* Initially hidden sections */
@@ -1718,8 +1723,23 @@ section {
     display: flex;
     align-items: center;  /* Align items vertically */
     justify-content: space-between; /* Space between logo & right-side content */
+    transition: transform 0.3s ease-in-out;
     height: 150px;
 }
+
+.navbar-goi.hidden {
+    transform: translateY(-100%);
+}
+
+/*ensure that top/home is visible not hidden behind the navbar */
+.home-goi {
+    padding-top: 200px; /* Adjust based on navbar height */
+}
+
+
+
+
+
 /* Responsive Design */
 /*@media screen and (max-width: 768px) {
     .navbar {
