@@ -197,18 +197,50 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleSearch() {
     document.querySelector(".search-container").classList.toggle("active");
     document.getElementById("searchInput").focus();
+    document.getElementById("searchResults").innerHTML = ""; // Clear previous results
 }
 
-// Function to search the page and highlight matches
+// Function to search and display results in a popup
 function searchPage() {
     let input = document.getElementById("searchInput").value.toLowerCase();
+    let resultsContainer = document.getElementById("searchResults");
 
     // Remove previous highlights
     removeHighlights();
 
-    if (input.length < 3) return; // Don't search if input is too short
+    if (input.length < 3) {
+        resultsContainer.style.display = "none"; // Hide popup if input is too short
+        return;
+    }
 
     highlightMatches(document.body, input);
+
+    // Get navigation links from existing menu
+    let navLinks = document.querySelectorAll("ul li a");
+    let menuResults = [];
+
+    navLinks.forEach(link => {
+        let title = link.textContent.trim();
+        let href = link.getAttribute("href");
+        if (title.toLowerCase().includes(input)) {
+            menuResults.push({ title, link: href });
+        }
+    });
+
+    // Clear previous results
+    resultsContainer.innerHTML = "";
+
+    if (menuResults.length > 0) {
+        resultsContainer.style.display = "block"; // Show popup
+        menuResults.forEach(result => {
+            let resultItem = document.createElement("div");
+            resultItem.classList.add("result-item");
+            resultItem.innerHTML = `<a href="${result.link}">${result.title}</a>`;
+            resultsContainer.appendChild(resultItem);
+        });
+    } else {
+        resultsContainer.style.display = "none"; // Hide if no results
+    }
 
     // Scroll to first match (optional)
     let firstMatch = document.querySelector(".highlight");
@@ -245,6 +277,16 @@ function removeHighlights() {
         mark.replaceWith(document.createTextNode(mark.textContent));
     });
 }
+
+// Close popup when clicking outside
+document.addEventListener("click", function(event) {
+    let searchContainer = document.querySelector(".search-container");
+    let resultsContainer = document.getElementById("searchResults");
+
+    if (!searchContainer.contains(event.target)) {
+        resultsContainer.style.display = "none";
+    }
+});
 
 //make GoI navbar disappear when we scrollY
 let lastScrollTop = 0;
