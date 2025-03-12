@@ -193,100 +193,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-//toogle search
+//toogle search functions, get search results to popup
+// Function to toggle the search bar visibility
 function toggleSearch() {
     document.querySelector(".search-container").classList.toggle("active");
-    document.getElementById("searchInput").focus();
-    document.getElementById("searchResults").innerHTML = ""; // Clear previous results
+    document.getElementById("search-input").focus();
 }
 
-// Function to search and display results in a popup
+// Function to search the page and highlight matches
 function searchPage() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let resultsContainer = document.getElementById("searchResults");
+    let input = document.querySelector(".search-input").value.trim().toLowerCase();
 
-    // Remove previous highlights
-    removeHighlights();
+    removeHighlights(); // Clear old highlights
 
-    if (input.length < 3) {
-        resultsContainer.style.display = "none"; // Hide popup if input is too short
-        return;
-    }
+    if (input.length < 1) return; // Don't search if input is empty
 
     highlightMatches(document.body, input);
 
-    // Get navigation links from existing menu
-    let navLinks = document.querySelectorAll("ul li a");
-    let menuResults = [];
-
-    navLinks.forEach(link => {
-        let title = link.textContent.trim();
-        let href = link.getAttribute("href");
-        if (title.toLowerCase().includes(input)) {
-            menuResults.push({ title, link: href });
-        }
-    });
-
-    // Clear previous results
-    resultsContainer.innerHTML = "";
-
-    if (menuResults.length > 0) {
-        resultsContainer.style.display = "block"; // Show popup
-        menuResults.forEach(result => {
-            let resultItem = document.createElement("div");
-            resultItem.classList.add("result-item");
-            resultItem.innerHTML = `<a href="${result.link}">${result.title}</a>`;
-            resultsContainer.appendChild(resultItem);
-        });
-    } else {
-        resultsContainer.style.display = "none"; // Hide if no results
-    }
-
     // Scroll to first match (optional)
-    let firstMatch = document.querySelector(".highlight");
-    if (firstMatch) {
-        firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-}
+      let firstMatch = document.querySelector("mark.highlight");
+      if (firstMatch) {
+          firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+  }
 
-// Function to highlight matches without breaking input fields
-function highlightMatches(element, searchText) {
-    if (element.nodeType === Node.TEXT_NODE) {
-        let text = element.nodeValue;
-        let parent = element.parentNode;
+  // Function to highlight matches, including full and partial words
+  function highlightMatches(element, searchText) {
+      if (!element || !searchText) return;
 
-        let regex = new RegExp(`(${searchText})`, "gi");
-        if (regex.test(text)) {
-            let newHTML = text.replace(regex, `<mark class="highlight">$1</mark>`);
-            let tempDiv = document.createElement("div");
-            tempDiv.innerHTML = newHTML;
+      // Only process elements inside the <body>
+      if (!document.body.contains(element)) return;
 
-            while (tempDiv.firstChild) {
-                parent.insertBefore(tempDiv.firstChild, element);
-            }
-            parent.removeChild(element);
-        }
-    } else if (element.nodeType === Node.ELEMENT_NODE && element.tagName !== "SCRIPT" && element.tagName !== "INPUT" && element.tagName !== "TEXTAREA") {
-        Array.from(element.childNodes).forEach(child => highlightMatches(child, searchText));
-    }
-}
+      if (element.nodeType === Node.TEXT_NODE) {
+          let text = element.nodeValue;
+          let parent = element.parentNode;
 
-// Function to remove highlights safely
-function removeHighlights() {
-    document.querySelectorAll("mark.highlight").forEach(mark => {
-        mark.replaceWith(document.createTextNode(mark.textContent));
-    });
-}
+          // Ensure parent exists and is not a script or style tag
+          if (!parent || ["SCRIPT", "STYLE"].includes(parent.tagName)) return;
 
-// Close popup when clicking outside
-document.addEventListener("click", function(event) {
-    let searchContainer = document.querySelector(".search-container");
-    let resultsContainer = document.getElementById("searchResults");
+          // Create a case-insensitive regex for full and partial matches
+          let regex = new RegExp(`(${searchText})`, "gi");
 
-    if (!searchContainer.contains(event.target)) {
-        resultsContainer.style.display = "none";
-    }
-});
+          // Replace matches with <mark> for highlighting
+          if (regex.test(text)) {
+              let newHTML = text.replace(regex, `<mark class="highlight">$1</mark>`);
+              let tempDiv = document.createElement("div");
+              tempDiv.innerHTML = newHTML;
+
+              // Insert highlighted content safely
+              while (tempDiv.firstChild) {
+                  parent.insertBefore(tempDiv.firstChild, element);
+              }
+              parent.removeChild(element);
+          }
+      }
+      // Process child elements recursively
+      else if (element.nodeType === Node.ELEMENT_NODE) {
+          Array.from(element.childNodes).forEach(child => highlightMatches(child, searchText));
+      }
+  }
+
+  // Function to remove highlights safely
+  function removeHighlights() {
+      document.querySelectorAll("mark.highlight").forEach(mark => {
+          let textNode = document.createTextNode(mark.textContent);
+          mark.replaceWith(textNode);
+      });
+  }
 
 //make GoI navbar disappear when we scrollY
 let lastScrollTop = 0;

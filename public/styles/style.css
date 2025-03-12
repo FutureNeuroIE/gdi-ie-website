@@ -1644,9 +1644,9 @@ section {
 
 /* Search Bar */
 .search-container {
-    display: inline-block;
+    display: flex;
     align-items: center;
-    /*position: relative;*/
+    position: relative; /*updated this 12-Mar*/
     background: transparent;
     padding: 5px;
     border-radius: 10px;
@@ -1678,10 +1678,10 @@ section {
 }
 
 /* Search Icon Button */
-.search-container {
+/*.search-container {
     display: flex;
     align-items: center;
-}
+}*/
 
 /* Expanded State for Search */
 .search-container.active {
@@ -1693,21 +1693,19 @@ section {
     opacity: 1;
 }
 
-.search-input:focus {
-    outline: none;
-}
-
 .searchResults {
-    display: none;
-    position: absolute;
-    background: black;
-    border: 1px solid #ddd;
-    width: 200px;
-    max-height: 150px;
-    overflow-y: auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border-radius: 4px;
+  /*display: none;*/
+  position: absolute;
+  top: 40px; /* Adjust so it appears just below the search input */
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  width: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
 }
 
 .result-item {
