@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     function toggleSearch() {
         let searchContainer = document.querySelector(".search-container");
-        let searchInput = document.getElementById("search-input");
+        let searchInput = document.getElementById("searchInput");
 
         // Toggle the floating search bar
         searchContainer.classList.toggle("active");
@@ -269,6 +269,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const searchInput = document.getElementById("searchInput");
       const searchResults = document.getElementById("search-results");
       const searchIcon = document.querySelector(".fa-search");
+
+      if (!searchContainer || !searchInput || !searchResults || !searchIcon) {
+        console.error("Some search elements are missing.");
+        return;
+    }
 
       // Check if the click is outside the search container
       if (

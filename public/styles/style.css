@@ -1658,7 +1658,7 @@ section {
     z-index: 1000;
     transition: all 0.3s ease-in-out;
     width: auto;
-    /*width: 10px; /* Initial width for the magnifying icon */*/
+    /*width: 10px; /* Initial width for the magnifying icon */
 }
 
 /* Magnifying Glass Icon */
@@ -1678,7 +1678,8 @@ section {
     padding: 8px 12px;
     outline: none;
     width: 0;
-    font-size: 20px;
+    flex-grow: 1;
+    font-size: 16px;
     transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
     opacity: 0; /* Initially hidden */
 }
@@ -1696,12 +1697,20 @@ section {
 
 /* Expanded State for Search */
 .search-container.active {
-    width: 250px; /* Expands container when active */
+    /*width: 150px; /* Expands container when active */
+    width:100%;
 }
+
+/* Keep search input and search results aligned */
+.search-container.active #search-results {
+    display: block;
+}
+
 
 .search-container.active .search-input {
     /*display: inline-block; /* Ensure it's shown */
-    width: 150px; /* Show search input when container is expanded */
+  /*  width: 150px; /* Show search input when container is expanded */
+    width: 180px;
     opacity: 1;
 }
 
@@ -1750,11 +1759,6 @@ section {
     text-decoration: none;
     color: #333;
     flex-grow: 1;
-}
-
-/* Keep search input and search results aligned */
-.search-container.active #search-results {
-    display: block;
 }
 
 
