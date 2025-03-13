@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/4bcf0b99d2.js" crossorigin="anonymous"></script>
-  <script src="../scripts/script.js" defer></script>
     <link rel="icon" type="image/svg" href="./images/goi_draft_trans_small.svg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
@@ -33,6 +32,9 @@
               <!-- Hidden Search Input -->
               <input type="text" class="search-input" placeholder="Search..." id="searchInput" oninput="searchPage()">
             </div>
+
+            <!-- Search results popup (Place this anywhere inside <body>, preferably near the search bar) -->
+           <ul id="search-results"></ul>
 
       <!--In-page menu-->
       <!-- 🔹 Hamburger Menu Button -->
@@ -95,7 +97,7 @@
 
         <div>
           <h3 class="info-goi"> We aim to create a dataset of DNA that represents the general Irish adult population. The same initiative is being carried out in other European countries. Together, these national projects will form what will be known as the Genome of Europe (GoE). The GoI is also providing Irish data to be hosted by GDI Ireland in the long-term </h3>
-              <h4 class="info-goi" style="padding-bottom:30px"> This project <a href="https://www.gov.ie/en/press-release/dbfe4-minister-for-health-announces-the-establishment-of-a-genome-of-ireland-project-to-advance-disease-prediction-and-prevention/" target="_blank" <i> launched officially</i></a> on 29th January 2025. Updates will be provided on this page </h4>
+              <h4 class="info-goi" style="padding-bottom:30px"> This project <a href="https://www.gov.ie/en/press-release/dbfe4-minister-for-health-announces-the-establishment-of-a-genome-of-ireland-project-to-advance-disease-prediction-and-prevention/" target="_blank" <i> launched officially</i></a> on the 29<sup>th</sup> of January 2025. Further updates will be provided on this page </h4>
               <!--*<div class="flex-item align-items-center justify-content-center">-->
                   <div class="progress-wrapper">
                     <span class="h3"><b> Month 1 </b></span>
@@ -539,5 +541,6 @@
     </style>
     </section>
 </div>
+<script src="../scripts/script.js" defer></script>
 </body>
 </html>

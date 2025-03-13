@@ -193,73 +193,99 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// new section
 //toogle search functions, get search results to popup
-// Function to toggle the search bar visibility
-function toggleSearch() {
-    document.querySelector(".search-container").classList.toggle("active");
-    document.getElementById("search-input").focus();
-}
+document.addEventListener("DOMContentLoaded", function () {
+    function toggleSearch() {
+        let searchContainer = document.querySelector(".search-container");
+        let searchInput = document.getElementById("search-input");
 
-// Function to search the page and highlight matches
-function searchPage() {
-    let input = document.querySelector(".search-input").value.trim().toLowerCase();
+        // Toggle the floating search bar
+        searchContainer.classList.toggle("active");
 
-    removeHighlights(); // Clear old highlights
+        if (searchContainer.classList.contains("active")) {
+            searchContainer.style.display = "block";
+            searchInput.style.display = "block"; // Show search input
+            searchInput.focus();
+        } else {
+            searchContainer.style.display = "none";
+            searchInput.style.display = "none"; // Hide search input
+            searchInput.value = "";
+            document.getElementById("search-results").innerHTML = ""; // Clear results
+        }
+    }
 
-    if (input.length < 1) return; // Don't search if input is empty
+    function searchPage() {
+        let input = document.getElementById("searchInput").value.trim().toLowerCase();
+        let searchResults = document.getElementById("search-results");
+        searchResults.innerHTML = ""; // Clear previous results
 
-    highlightMatches(document.body, input);
+        if (input.length < 2) {
+            searchResults.style.display = "none";
+            return; // Require at least 2 characters
+        }
 
-    // Scroll to first match (optional)
-      let firstMatch = document.querySelector("mark.highlight");
-      if (firstMatch) {
-          firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+        let matches = [];
+        document.body.querySelectorAll("*:not(script):not(style)").forEach(el => {
+            if (el.childNodes.length === 1 && el.firstChild.nodeType === Node.TEXT_NODE) {
+                let text = el.innerText.trim().toLowerCase();
+                if (text.includes(input)) {
+                    let id = el.id || generateId(el);
+                    matches.push({ text: text.substring(0, 50) + "...", id: id });
+                }
+            }
+        });
+
+        if (matches.length > 0) {
+            searchResults.style.display = "block";
+            matches.forEach(match => {
+                let listItem = document.createElement("li");
+                listItem.innerHTML = `<i class="fa fa-link"></i> <a href="#${match.id}" onclick="toggleSearch()">${match.text}</a>`;
+                searchResults.appendChild(listItem);
+            });
+        } else {
+            searchResults.innerHTML = "<li>🚫 No results found</li>";
+            searchResults.style.display = "block";
+        }
+    }
+
+    function generateId(element) {
+        let id = "id-" + Math.random().toString(36).substr(2, 9);
+        element.id = id;
+        return id;
+    }
+
+    // Detect when user presses Enter
+    document.getElementById("searchInput").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            searchPage();
+        }
+    });
+
+    // Close search when clicking outside
+    // Close search results when clicking outside the search container, but keep the search icon visible
+    document.addEventListener("click", function (event) {
+      const searchContainer = document.querySelector(".search-container");
+      const searchInput = document.getElementById("searchInput");
+      const searchResults = document.getElementById("search-results");
+      const searchIcon = document.querySelector(".fa-search");
+
+      // Check if the click is outside the search container
+      if (
+        !searchContainer.contains(event.target) &&
+        !searchIcon.contains(event.target)
+      ) {
+        searchContainer.classList.remove("active");
+        searchInput.style.display = "none"; // Hide input field
+        searchResults.style.display = "none"; // Hide search results
       }
-  }
+});
 
-  // Function to highlight matches, including full and partial words
-  function highlightMatches(element, searchText) {
-      if (!element || !searchText) return;
 
-      // Only process elements inside the <body>
-      if (!document.body.contains(element)) return;
+    window.toggleSearch = toggleSearch; // Make function global
+});
 
-      if (element.nodeType === Node.TEXT_NODE) {
-          let text = element.nodeValue;
-          let parent = element.parentNode;
 
-          // Ensure parent exists and is not a script or style tag
-          if (!parent || ["SCRIPT", "STYLE"].includes(parent.tagName)) return;
-
-          // Create a case-insensitive regex for full and partial matches
-          let regex = new RegExp(`(${searchText})`, "gi");
-
-          // Replace matches with <mark> for highlighting
-          if (regex.test(text)) {
-              let newHTML = text.replace(regex, `<mark class="highlight">$1</mark>`);
-              let tempDiv = document.createElement("div");
-              tempDiv.innerHTML = newHTML;
-
-              // Insert highlighted content safely
-              while (tempDiv.firstChild) {
-                  parent.insertBefore(tempDiv.firstChild, element);
-              }
-              parent.removeChild(element);
-          }
-      }
-      // Process child elements recursively
-      else if (element.nodeType === Node.ELEMENT_NODE) {
-          Array.from(element.childNodes).forEach(child => highlightMatches(child, searchText));
-      }
-  }
-
-  // Function to remove highlights safely
-  function removeHighlights() {
-      document.querySelectorAll("mark.highlight").forEach(mark => {
-          let textNode = document.createTextNode(mark.textContent);
-          mark.replaceWith(textNode);
-      });
-  }
 
 //make GoI navbar disappear when we scrollY
 let lastScrollTop = 0;
