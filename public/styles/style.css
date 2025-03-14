@@ -283,7 +283,7 @@ h3 {
 .about-section {
     padding: 50px;
     background-color: #7B1C58;
-    color: white;
+    color: white; /*white*/
 }
 
 .footer {
@@ -1352,6 +1352,13 @@ textarea {
     margin: 0 auto; /* Centers the images horizontally */
 }
 
+.collaborators-section-goi {
+    padding: 30px 0;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Slightly darker border */
+  }
+
 .collaborators-section {
     padding: 50px 0;
   }
@@ -1388,12 +1395,13 @@ textarea {
 
 /* Genome of Ireland-specific CSS styles */
 .animatedImageContainerGoI {
-  height:30px;  /* Set the desired height */
-  width: 30px; /* Set the desired width */
-  max-width: 30px;
+  height:auto;  /* Set the desired height */
+  width: 200px; /* Set the desired width */
+  max-width: 300px;
   overflow: hidden;
   display: flex;
   padding: 5px;
+  flex-shrink: 0;
   /*justify-content: center;
   align-items: center; */
 }
@@ -1405,12 +1413,34 @@ textarea {
   height: auto; /* Maintains aspect ratio */
   object-fit: contain;
   opacity: 0;
+  flex:2; /* Makes it wider than the text */
+
+}
+
+.logo-text-container {
+    display: flex;  /* Enables horizontal alignment */
+    align-items: center; /* Aligns items vertically */
+    gap: 10px; /* Adds space between the logo and text */
+    flex:1;/* Keeps text smaller than the logo */
+}
+
+.logo-text{
+  font-size: xx-large;
+  flex:1;
+  text-align: left;
+  padding: 10px;
+  color: #4a4a4a;
+  opacity: 1;
+  background-color: none;
+  animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
 }
 
 .about-section-goi {
     padding: 50px;
-    background-color: #3C8418; /*#6AA14E for RBG 106,161,78 OR  #42ABAE 66,171,174*/
-    color: white;
+    background-color: #F2F2F2; /*#6AA14E for RBG 106,161,78 OR  #42ABAE 66,171,174*/
+    color: #4a4a4a;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Slightly darker border */
 }
 
 /*progress bar */
@@ -1791,10 +1821,22 @@ section {
 /*ensure that top/home is visible not hidden behind the navbar */
 .home-goi {
     padding-top: 200px; /* Adjust based on navbar height */
+    /*add picture as background*/
+    background-image: url('../images/home_background.svg'); /* Replace with actual image path */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
 }
 
-
-
+/* divider between sections*/
+.divider {
+    width: 90%;
+    height: 5px;
+    background-color: #C0C0C0; /* Grey color */
+    border: none;
+    margin: 20px auto;
+    display:flex;
+}
 
 
 /* Responsive Design */
