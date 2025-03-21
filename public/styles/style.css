@@ -1394,46 +1394,85 @@ textarea {
   }
 
 /* Genome of Ireland-specific CSS styles */
+.flex-logo-text-container{
+  display: flex; /* Enables side-by-side layout */
+  flex-wrap: nowrap; /* no wrapping*/
+  justify-content: space-between; /* Aligns items centrally in the container */
+  align-items: center; /* Vertically aligns items */
+  width: 100%;
+  height: auto; /* Adjusts height automatically */
+  gap: 5px; /*gap between the two sections */
+  box-sizing: border-box; /* Ensures padding is included in dimensions */
+
+}
+
 .animatedImageContainerGoI {
-  height:auto;  /* Set the desired height */
-  width: 200px; /* Set the desired width */
-  max-width: 300px;
-  overflow: hidden;
-  display: flex;
-  padding: 5px;
-  flex-shrink: 0;
-  /*justify-content: center;
-  align-items: center; */
+    flex: 1; /* Occupies less than half the screen */
+    max-width: 40%; /* Ensures it doesn’t go beyond half the screen */
+    text-align: center; /* Centers the image horizontally */
+    /*padding: 5px; /* Optional padding around the logo */
+    box-sizing: border-box;
 }
 
 .animatedImageGoI {
-  max-width: 100%;  /* Makes the image fill the container */
-  max-height: 100%;
-  width:auto;
-  height: auto; /* Maintains aspect ratio */
+  width: 100%;  /* Makes the image fill the container */
+  max-width: 300px !important; /*override logo-container*/
+  height: auto !important; /* Maintains aspect ratio */
   object-fit: contain;
   opacity: 0;
-  flex:2; /* Makes it wider than the text */
+  margin: 0 auto; /* Center the image within its container */
+  /*flex:1;*/
 
 }
 
+/*fix overriding issues*/
+.logo-container #animatedImageGoI {
+    height: auto !important; /* Allow the height to scale proportionally */
+    max-width: 500px !important; /* Set a maximum width */
+    padding: 0 !important; /* Remove padding if unnecessary */
+    object-fit: contain; /* Ensure it maintains aspect ratio */
+    display: block; /* Prevent inline-block spacing issues */
+    margin: 0 auto; /* Center the image */
+}
+
+
 .logo-text-container {
-    display: flex;  /* Enables horizontal alignment */
-    align-items: center; /* Aligns items vertically */
-    gap: 10px; /* Adds space between the logo and text */
-    flex:1;/* Keeps text smaller than the logo */
+    /*display: flex;  /* Enables horizontal alignment */
+    flex: 4;/* Keeps text smaller than the logo */
+    max-width: 60%; /* Make the container span the full width */
+    /*flex-wrap: wrap;*/
+    height: auto;
+    /*padding: 5px;*/
+    box-sizing: border-box; /* Include padding in size calculation */
+    /*max-width: 30%;
+    /*max-width: 60%;*/
 }
 
 .logo-text{
-  font-size: xx-large;
-  flex:1;
-  text-align: left;
-  padding: 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  /*padding: 10px;*/
   color: #4a4a4a;
   opacity: 1;
   background-color: none;
   animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
 }
+
+/* Small screens: Stacks the logo and text vertically */
+@media screen and (max-width: 768px) {
+  .flex-logo-text-container {
+    flex-direction: column; /* Stacks the logo and text vertically */
+    align-items: center; /* Centers both sections horizontally */
+    gap: 20px;
+  }
+
+  .animatedImageContainerGoI,
+  .logo-text-container {
+    max-width: 100%; /* Allows both containers to span the full width */
+    flex: unset; /* Removes flex priority */
+  }
+}
+
 
 .about-section-goi {
     padding: 50px;
@@ -1494,7 +1533,7 @@ textarea {
     justify-content: space-around; /* Evenly distribute columns */
     gap: 20px; /* Space between columns */
     text-align: center; /* Center text in each column */
-    max-width: 900px; /* Adjust as needed */
+    /*max-width: 900px; /* Adjust as needed */
     margin: auto; /* Center container */
     }
     img {
@@ -1506,12 +1545,25 @@ textarea {
 
 .column-use-case {
             flex: 1;
-            min-width: 250px;
+            min-width: 150px;
             padding: 8px;
         }
         .full-width {
             flex-basis: 100%;
         }
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .container-use-case {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center columns */
+    }
+
+    .column-use-case {
+        flex-basis: 100%; /* Make each column take the full width */
+    }
+}
+
 
 .back-to-top {
     position: fixed;
@@ -1654,7 +1706,7 @@ section {
 
 .info-goi{
     text-align: center;
-    font-size: xx-large;
+    font-size: 1.7rem;
     padding: 15px;
     color: #4a4a4a;
     opacity: 1;
@@ -1746,7 +1798,7 @@ section {
 
 #search-results {
     position: absolute;
-    /*top: 60px;*/
+    top: 60px;
     /*left: 50%;*/
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.9);
@@ -1755,7 +1807,7 @@ section {
     border-radius: 10px;
     width: 280px;
     display: none;
-    z-index: 1000;
+    z-index: 9999;
     padding: 10px;
     list-style: none;
     transition: all 0.3s ease-in-out;
@@ -1822,7 +1874,7 @@ section {
 .home-goi {
     padding-top: 200px; /* Adjust based on navbar height */
     /*add picture as background*/
-    background-image: url('../images/home_background.svg'); /* Replace with actual image path */
+    /*background-image: url('../images/home_background.svg'); /* Replace with actual image path */
     background-size: cover; /* Ensures the image covers the section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating */

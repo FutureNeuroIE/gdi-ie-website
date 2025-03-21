@@ -90,6 +90,11 @@ function openBioModal(content) {
     modal.style.display = 'block';
 }
 
+function closeBioModal() {
+    var modal = document.querySelector('.bio-modal');
+    modal.style.display = 'none';
+}
+
 //hamburger menu goi
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
@@ -112,16 +117,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuLinks = document.querySelectorAll(".side-menu a");
     menuLinks.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50,
-                    behavior: "smooth"
-                });
-            }
-            sideMenu.classList.remove("active"); // Close menu after selection
+          const href = this.getAttribute("href");
+
+      // Check if it's an internal anchor link (starts with #)
+      if (href.startsWith("#")) {
+          event.preventDefault(); // Prevent default only for internal links
+          const targetId = href.substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+              window.scrollTo({
+                  top: targetSection.offsetTop - 50,
+                  behavior: "smooth"
+              });
+          }
+          sideMenu.classList.remove("active"); // Close menu after selection
+      }
+      // Allow external links (starting with http/https) to navigate normally
         });
     });
 
@@ -240,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
             searchResults.style.display = "block";
             matches.forEach(match => {
                 let listItem = document.createElement("li");
-                listItem.innerHTML = `<i class="fa fa-link"></i> <a href="#${match.id}" onclick="toggleSearch()">${match.text}</a>`;
+                listItem.innerHTML = `<i class="fa fa-link"></i> <a href="#${match.id}" class="search-result-link">${match.text}</a>`;
                 searchResults.appendChild(listItem);
             });
         } else {
@@ -261,6 +272,18 @@ document.addEventListener("DOMContentLoaded", function () {
             searchPage();
         }
     });
+
+//Updated Code for Search Results Click Handling
+    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("search-result-link")) {
+            // Hide search input & results
+            document.querySelector(".search-container").classList.remove("active");
+            document.getElementById("searchInput").style.display = "none";
+            document.getElementById("search-results").style.display = "none";
+        }
+    });
+});
 
     // Close search when clicking outside
     // Close search results when clicking outside the search container, but keep the search icon visible
