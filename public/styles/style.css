@@ -1486,7 +1486,7 @@ textarea {
 .progress-wrapper {
   display: flex;
   align-items: center; /* Align items vertically to the center */
-  justify-content: space-around; /* Add space between the elements */
+  justify-content: center; /* Add space between the elements */
   padding:20px;
   margin: 0 3px; /* Reduced horizontal space around the progress bar */
 }
@@ -1515,8 +1515,8 @@ textarea {
 }
 
 .header-goi {
-    border-bottom: 1px solid #3C8418;
-    background-color: #3C8418;
+    border-bottom: 1px solid #6AA14E;
+    background-color: #6AA14E;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -1525,7 +1525,7 @@ textarea {
 
 .footer-goi {
     padding: 50px;
-    background-color: #3C8418;
+    background-color: #6AA14E;
 }
 
 .container-use-case {
@@ -1888,6 +1888,45 @@ section {
     border: none;
     margin: 20px auto;
     display:flex;
+}
+
+/* definition links for commonly used scientific terms*/
+.definition-link,
+.definition-link:visited,
+.definition-link:hover,
+.definition-link:active{
+  color: grey;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s ease;
+}
+.definition-link:hover {
+  border-bottom: 1px dashed grey;
+}
+
+/* FAQ section*/
+details {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  outline: none;
+}
+
+details[open] {
+  background-color: #f1f1f1;
+}
+
+details p {
+  margin-top: 0.5rem;
+  color: #555;
 }
 
 
