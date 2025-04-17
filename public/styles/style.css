@@ -1515,8 +1515,8 @@ textarea {
 }
 
 .header-goi {
-    border-bottom: 1px solid #6AA14E;
-    background-color: #6AA14E;
+    border-bottom: 1px solid #F4F4F4;
+    background-color: #F4F4F4;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -1706,7 +1706,7 @@ section {
 
 .info-goi{
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 2rem;
     padding: 15px;
     color: #4a4a4a;
     opacity: 1;
