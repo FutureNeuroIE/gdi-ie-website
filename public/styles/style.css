@@ -1401,14 +1401,14 @@ textarea {
   align-items: center; /* Vertically aligns items */
   width: 100%;
   height: auto; /* Adjusts height automatically */
-  gap: 5px; /*gap between the two sections */
+  gap: 2px; /*gap between the two sections */
   box-sizing: border-box; /* Ensures padding is included in dimensions */
 
 }
 
 .animatedImageContainerGoI {
     flex: 1; /* Occupies less than half the screen */
-    max-width: 40%; /* Ensures it doesn’t go beyond half the screen */
+    max-width: 30%; /* Ensures it doesn’t go beyond half the screen */
     text-align: center; /* Centers the image horizontally */
     /*padding: 5px; /* Optional padding around the logo */
     box-sizing: border-box;
@@ -1439,7 +1439,7 @@ textarea {
 .logo-text-container {
     /*display: flex;  /* Enables horizontal alignment */
     flex: 4;/* Keeps text smaller than the logo */
-    max-width: 60%; /* Make the container span the full width */
+    max-width: 70%; /* Make the container span the full width */
     /*flex-wrap: wrap;*/
     height: auto;
     /*padding: 5px;*/
@@ -1449,7 +1449,7 @@ textarea {
 }
 
 .logo-text{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
   /*padding: 10px;*/
   color: #4a4a4a;
@@ -1515,8 +1515,8 @@ textarea {
 }
 
 .header-goi {
-    border-bottom: 1px solid #F4F4F4;
-    background-color: #F4F4F4;
+    border-bottom: 1px solid #42ABAE;
+    background-color: #42ABAE;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -1525,7 +1525,7 @@ textarea {
 
 .footer-goi {
     padding: 50px;
-    background-color: #6AA14E;
+    background-color: #B6DA9F;
 }
 
 .container-use-case {
@@ -1856,7 +1856,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #3C8418;
+    background-color: #B6DA9F;
     padding: 10px 10px;
     z-index: 999;
     display: flex;
