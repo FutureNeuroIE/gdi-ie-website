@@ -1398,17 +1398,21 @@ textarea {
   display: flex; /* Enables side-by-side layout */
   flex-wrap: nowrap; /* no wrapping*/
   justify-content: space-between; /* Aligns items centrally in the container */
+  /*justify-content: center;*/
   align-items: center; /* Vertically aligns items */
-  width: 100%;
+  width: 90%;
   height: auto; /* Adjusts height automatically */
-  gap: 2px; /*gap between the two sections */
+  gap: 15px; /*gap between the two sections */
   box-sizing: border-box; /* Ensures padding is included in dimensions */
+  margin: 0 auto; /*centered horizontally*/
+  padding: 0 5px;
 
 }
 
 .animatedImageContainerGoI {
     flex: 1; /* Occupies less than half the screen */
     max-width: 30%; /* Ensures it doesn’t go beyond half the screen */
+    max-height: 80px;
     text-align: center; /* Centers the image horizontally */
     /*padding: 5px; /* Optional padding around the logo */
     box-sizing: border-box;
@@ -1427,7 +1431,7 @@ textarea {
 /*fix overriding issues*/
 .logo-container #animatedImageGoI {
     height: auto !important; /* Allow the height to scale proportionally */
-    max-width: 500px !important; /* Set a maximum width */
+    max-width: 300px !important; /* Set a maximum width */
     padding: 0 !important; /* Remove padding if unnecessary */
     object-fit: contain; /* Ensure it maintains aspect ratio */
     display: block; /* Prevent inline-block spacing issues */
@@ -1437,12 +1441,13 @@ textarea {
 
 .logo-text-container {
     /*display: flex;  /* Enables horizontal alignment */
-    flex: 4;/* Keeps text smaller than the logo */
-    max-width: 70%; /* Make the container span the full width */
+    flex: 3;/* Keeps text smaller than the logo */
+    max-width: 50%; /* Make the container span the full width */
     /*flex-wrap: wrap;*/
     height: auto;
     /*padding: 5px;*/
     box-sizing: border-box; /* Include padding in size calculation */
+    margin: 0 auto;
     /*max-width: 30%;
     /*max-width: 60%;*/
 }
@@ -1486,7 +1491,7 @@ textarea {
   display: flex;
   align-items: center; /* Align items vertically to the center */
   justify-content: center; /* Add space between the elements */
-  padding:20px;
+  padding:15px;
   gap:20px;
   margin: 0 3px; /* Reduced horizontal space around the progress bar */
 }
@@ -1526,7 +1531,7 @@ textarea {
 
 .footer-goi {
     padding: 50px;
-    background-color: #B4D9A4;
+    background-color: #4A4A4A;
 }
 
 .container-use-case {
@@ -1719,11 +1724,16 @@ section {
 /*lock GoI logo to the top left*/
 .logo-container-goi {
     flex:1;
-    padding:10px
+    padding:10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .logo-goi {
     border-radius: 10px;
+    height:100%;
+    max-height:100%;
 }
 
 /* Search Bar */
@@ -1858,7 +1868,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #B4D9A4;
+    background-color: #4A4A4A;
     padding: 10px 10px;
     z-index: 999;
     display: flex;
@@ -1884,9 +1894,9 @@ section {
 
 /* divider between sections*/
 .divider {
-    width: 90%;
+    width: 100%;
     height: 5px;
-    background-color: #C0C0C0; /* Grey color */
+    background-color: #CCCCCC; /* Grey color */
     border: none;
     margin: 20px auto;
     display:flex;
@@ -1929,6 +1939,11 @@ details[open] {
 details p {
   margin-top: 0.5rem;
   color: #555;
+}
+
+/*section heading*/
+.section-heading{
+  text-align: center;
 }
 
 
