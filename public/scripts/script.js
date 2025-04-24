@@ -329,3 +329,16 @@ window.addEventListener("scroll", function () {
        navbar.classList.add("hidden");
    }
 });
+
+//dismiss banner
+function dismissBanner() {
+    const banner = document.getElementById("constructionBanner");
+    banner.style.display = "none";
+    sessionStorage.setItem("hideConstructionBanner", "true");
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    if (sessionStorage.getItem("hideConstructionBanner") === "true") {
+      document.getElementById("constructionBanner").style.display = "none";
+    }
+  });
