@@ -308,6 +308,13 @@ h3 {
 
 }
 
+.logo-container_goi img {
+    height: 100%;
+    max-width: 100%;
+    padding: 5px;
+
+}
+
 
 .collabs {
     background: none; /* Remove background property from #home */
@@ -1401,31 +1408,31 @@ textarea {
 .flex-logo-text-container{
   display: flex; /* Enables side-by-side layout */
   flex-wrap: nowrap; /* no wrapping*/
-  justify-content: space-between; /* Aligns items centrally in the container */
+  justify-content: flex-start; /* center Aligns items centrally in the container */
   /*justify-content: center;*/
-  align-items: center; /* Vertically aligns items */
-  width: 90%;
+  align-items: flex-start; /* center vertically aligns items */
+  width: 85%;
   height: auto; /* Adjusts height automatically */
-  gap: 15px; /*gap between the two sections */
+  gap: 2px; /*gap between the two sections */
   box-sizing: border-box; /* Ensures padding is included in dimensions */
   margin: 0 auto; /*centered horizontally*/
-  padding: 0 5px;
+  /*padding: 0;*/
 
 }
 
 .animatedImageContainerGoI {
+    /*flex: 0 0 auto; /* prevents growing or shrinking */
     flex: 1; /* Occupies less than half the screen */
-    max-width: 30%; /* Ensures it doesn’t go beyond half the screen */
-    max-height: 80px;
+    width: 350px; 
+    height: 350px;
     text-align: center; /* Centers the image horizontally */
     /*padding: 5px; /* Optional padding around the logo */
     box-sizing: border-box;
 }
 
-.animatedImageGoI {
-  width: 100%;  /* Makes the image fill the container */
-  max-width: 300px !important; /*override logo-container*/
-  height: auto !important; /* Maintains aspect ratio */
+#animatedImageGoI {
+  width: 100%;  
+  height: 100%; /*these have to be given for object fit to work and maintains aspect ratio */
   object-fit: contain;
   opacity: 0;
   margin: 0 auto; /* Center the image within its container */
@@ -1433,25 +1440,25 @@ textarea {
 }
 
 /*fix overriding issues*/
-.logo-container #animatedImageGoI {
-    height: auto !important; /* Allow the height to scale proportionally */
-    max-width: 300px !important; /* Set a maximum width */
-    padding: 0 !important; /* Remove padding if unnecessary */
-    object-fit: contain; /* Ensure it maintains aspect ratio */
-    display: block; /* Prevent inline-block spacing issues */
-    margin: 0 auto; /* Center the image */
-}
+/*.logo-container #animatedImageGoI {
+   /* height: auto !important; /* Allow the height to scale proportionally */
+   /* max-width: 300px !important; /* Set a maximum width */
+    /*padding: 0 !important; /* Remove padding if unnecessary */
+    /*object-fit: contain; /* Ensure it maintains aspect ratio */
+    /*display: block; /* Prevent inline-block spacing issues */
+    /*margin: 0 auto; /* Center the image */
+/*}*/
 
 
 .logo-text-container {
     /*display: flex;  /* Enables horizontal alignment */
-    flex: 3;/* Keeps text smaller than the logo */
-    max-width: 50%; /* Make the container span the full width */
+    flex: 2;/* Keeps text smaller than the logo */
+    max-width: 100%; /* Make the container span the full width */
     /*flex-wrap: wrap;*/
     height: auto;
     /*padding: 5px;*/
     box-sizing: border-box; /* Include padding in size calculation */
-    margin: 0 auto;
+    /*margin: 0 auto;
     /*max-width: 30%;
     /*max-width: 60%;*/
 }
@@ -1463,8 +1470,30 @@ textarea {
   color: #4a4a4a;
   opacity: 1;
   background-color: none;
+  width:80%;
+  margin: 0 auto; 
+  /*padding: 0; */
+  margin-bottom: 10px;
   animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
 }
+
+.logo-text-less{
+    font-size: 1.5rem;
+    text-align: center;
+    /*padding: 10px;*/
+    color: #4a4a4a;
+    opacity: 1;
+    background-color: none;
+    margin-left: 2px;
+    margin-right: 2px; 
+    margin-bottom:15px;
+    margin-top:5px;
+    width:80%;
+    /*margin: 0 auto;8? 
+    /*padding: 0; */
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+  }
 
 /* Small screens: Stacks the logo and text vertically */
 @media screen and (max-width: 768px) {
@@ -1484,6 +1513,8 @@ textarea {
 
 .about-section-goi {
     padding: 50px;
+    width:80%;
+    margin: 0 auto; /* <-- This centers it horizontally */
     background-color: #F2F2F2; /*#6AA14E for RBG 106,161,78 OR  #42ABAE 66,171,174*/
     color: #4a4a4a;
     border-radius: 5px;
@@ -1521,7 +1552,7 @@ textarea {
 /* Animation for progress bar */
 @keyframes loading {
     from { width: 0%; background-color:#42ABAE; }
-    to { width: 8%; background-color:#42ABAE; }  /* stop the bar loading at this point */
+    to { width: 12.5%; background-color:#42ABAE; }  /* stop the bar loading at this point */
 }
 
 .header-goi {
@@ -1900,7 +1931,7 @@ section {
 .divider {
     width: 100%;
     height: 5px;
-    background-color: #CCCCCC; /* Grey color */
+    background-color: #6A6A6A; /* Grey color */
     border: none;
     margin: 20px auto;
     display:flex;

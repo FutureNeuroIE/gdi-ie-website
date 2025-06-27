@@ -20,7 +20,7 @@
           <!--place logo at top left-->
           <div class="logo-container-goi">
            <a href="https://genomicdata.ie/genomeofireland">
-             <img src="images/goi_logo_whitetext_small.png" class="logo-goi" alt="Genome of Ireland Logo" >
+             <img src="images/goi_logo_whitetext_small.png" class="logo-goi" alt="Genome of Ireland Logo" style="margin-left: 50px;" >
            </a>
          </div>
 
@@ -68,28 +68,31 @@
 
 <!--Mainu-->
 <section id="top" class="home-goi" >
-    <div class="logo-container">
+    <div class="logo-container_goi">
       <div class="flex-container">
         <div class="flex-item">
           <h1 class="info-goi"><b> Welcome to the Genome of Ireland (GoI) project! </b></h1>
            </div>
 
         <div class="flex-logo-text-container">
-            <div id="animatedImageContainerGoI">
+            <div class="animatedImageContainerGoI">
                 <img id="animatedImageGoI" src="images/ppi_logo_small.png" alt="A logo that reads Genome of Ireland. The image is a sphere half made up of a DNA double helix which runs across the entire island of Ireland">
             </div>
             <div class="logo-text-container">
-            <h4 class="logo-text">
-              We aim to create a cohort of research participants whose <a href="https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-genomics/#1" class="definition-link" target="_blank"> DNA </a> represents the general adult population living on the island of Ireland.
+            <h4 class="logo-text-less">
+              We aim to create a cohort of research participants whose <a href="https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-genomics/#1" class="definition-link" target="_blank"> DNA </a> represents the general adult population living on the island of Ireland. </h4>
 
-              DNA from the Genome of Ireland (GoI) will help scientists to understand which differences in our DNA might be associated with <a href="https://youtu.be/71X7a8eu73k?si=6MghzsYtxQVg-eSd" class="definition-link" target="_blank"> certain traits and conditions </a> versus those that are not. </p>
+              <h4 class="logo-text-less"> DNA from the Genome of Ireland (GoI) will help scientists to understand which differences in our DNA might be associated with <a href="https://youtu.be/71X7a8eu73k?si=6MghzsYtxQVg-eSd" class="definition-link" target="_blank"> certain traits and conditions </a> versus those that are not. </h4>
 
-              <p>This project is managed by a cross-disciplinary <a href="#team" class="definition-link">team</a> on behalf of the <a href="https://www.gov.ie/en/department-of-health/press-releases/minister-for-health-announces-the-establishment-of-a-genome-of-ireland-project-to-advance-disease-prediction-and-prevention/" class="definition-link" target="_blank"> Department of Health</a>.</p>
+              <h4 class="logo-text-less">This project is managed by a cross-disciplinary <a href="#team" class="definition-link">team</a> on behalf of the <a href="https://www.gov.ie/en/department-of-health/press-releases/minister-for-health-announces-the-establishment-of-a-genome-of-ireland-project-to-advance-disease-prediction-and-prevention/" class="definition-link" target="_blank"> Department of Health</a>.</h4>
           </div>
         </div>
+      </div>
+      </div>
 
   <!--Text not within container-->
-<p><h4 class="logo-text">The same initiative is ongoing in other European countries. Together, these national projects will form the Genome of Europe (GoE). DNA provided by people in the Genome of Ireland (GoI) dataset will stored securely in the Irish branch of the <a href="https://genomicdata.ie/index.html" class="definition-link" target="_blank"> Genomic Data Infrastructure <a> project in the long-term. </p></h4>
+  <div class="flex-logo-text-container">
+    <h4 class="logo-text">The same initiative is ongoing in other European countries. Together, these national projects will form the Genome of Europe (GoE). DNA provided by people in the Genome of Ireland (GoI) dataset will stored securely in the Irish branch of the <a href="https://genomicdata.ie/index.html" class="definition-link" target="_blank"> Genomic Data Infrastructure <a> project in the long-term.</h4>
 
             <script>
                 var animatedImage = document.getElementById('animatedImageGoI');
@@ -108,6 +111,7 @@
                 // Call the fadeInImage function to start the animation
                 fadeInImage();
             </script>
+  </div>
 
         <div>
           <hr class="divider"> <!-- Grey Divider -->
@@ -118,6 +122,7 @@
                     <div class="progress-container">
                       <div class="progress-bar"></div>
              </div>
+            
              <span class="h3"><b> Month 48</b></span>
            </div>
         </div> <br><br>
@@ -152,9 +157,9 @@
           <div class="column-use-case">
           <h5><b> Genetic references for Irish population structure </h5></b><br>
           <a href="https://youtu.be/qKXIiyQJTJY?si=9n8zcIN1eRScMVzh" target="_blank" >
-            <img src="images/demographics_draft.svg" alt="Image depicting genetic references for the population structure of Ireland ">
+            <img src="images/demographics_draft_spread.svg" alt="Image depicting genetic references for the population structure of Ireland ">
           </a>
-            <h6>To understand how populations have changed around Ireland over long periods in the past. </h6>
+            <h6>To understand how populations have changed around Ireland over long periods in the past </h6>
       </div>
     </div>
   </div>
@@ -395,7 +400,7 @@
         <div class="col-md-6 d-flex">
           <div class="collaborator-card flex-grow-1">
             <div class="collaborator-image">
-              <a href="https://b1mg-project.eu/docs/genome-europe.pdf" target="_blank">
+              <a href="https://genomeofeurope.eu/" target="_blank">
               <img src="images/goe_logo.jpg" alt="The Genome of Europe logo. It is spelt out G O E, with G and E in blue, and O in yellow with a map of Europe within the O">
             </a>
             </div>
@@ -502,7 +507,7 @@
   <div class="logo-container-goi">
         <div class="flex-container">
           <div class="flex-item">
-            <h4 class="section-heading"> The Department of Health and RCSI are joint data controllers for this project. Please contact us <a href="mailto:genomeofireland@rcsi.ie?subject=Genome%20of%20Ireland" target="_blank">here</a> for further information. <h4> </p>
+            <p><h4 class="section-heading"> The Department of Health and RCSI are joint data controllers for this project. Please contact us <a href="mailto:genomeofireland@rcsi.ie?subject=Genome%20of%20Ireland" target="_blank">here</a> for further information. <h4> </p>
             <p><h4 class="section-heading">The Genome of Ireland project is advised by collaborators and a Steering Committee with expertise in genomics, healthcare, bioinformatics, patient advocacy and lived experience.</h4></p>
           </div>
           </div>
